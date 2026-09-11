@@ -1,7 +1,7 @@
 [project]
-name = "trending-non-ai"
+name = "github-trending-without-ai"
 version = "0.1.0"
-description = "Add your description here"
+description = "GitHub trending, with the AI/LLM repos filtered out — auto-updated daily"
 readme = "README.md"
 authors = [
     { name = "Pritam Patil", email = "pritam18@hotmail.com" }
@@ -11,9 +11,5 @@ dependencies = [
     "requests>=2.34.2",
 ]
 
-[project.scripts]
-trending-non-ai = "trending_non_ai:main"
-
-[build-system]
-requires = ["uv_build>=0.12.6,<0.13.0"]
-build-backend = "uv_build"
+[tool.uv]
+package = false

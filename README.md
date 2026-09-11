@@ -7,9 +7,6 @@ and prompt toolkits. This list surfaces what's *actually* being built and
 starred right now — with the AI projects filtered out — so you can find
 interesting tools, languages, and libraries again.
 
-Inspired by [thatshubham/no-ai](https://github.com/thatshubham/no-ai), a
-curated directory of AI-free software.
-
 ## How it works
 
 A daily GitHub Action queries the GitHub Search API for repositories with
