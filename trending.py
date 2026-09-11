@@ -23,8 +23,13 @@ MIN_STARS = 100  # Minimum stars to consider a repo popular
 DAYS_BACK = 7  # Look at repos active in the last X days
 README_FILE = "README.md"
 JSON_FILE = "data/trending.json"
+HISTORY_DIR = "data/history"
 START_MARKER = "<!-- TRENDING:START -->"
 END_MARKER = "<!-- TRENDING:END -->"
+LANG_START_MARKER = "<!-- BY_LANGUAGE:START -->"
+LANG_END_MARKER = "<!-- BY_LANGUAGE:END -->"
+MAX_LANGUAGES = 6  # Soft caps for the by-language README sections
+MAX_REPOS_PER_LANGUAGE = 10
 
 # Keywords used to identify AI/LLM-focused repositories for exclusion.
 # Matched on word boundaries so "ai" doesn't match "maintain" or "email".
@@ -179,6 +184,52 @@ def build_dataset(repos: list[dict], generated_at: str | None = None) -> dict:
     }
 
 
+def rank_from_snapshot(snapshot: dict) -> dict:
+    """Reconstruct ranks from a {full_name: stars} snapshot using the same
+    sort rule as rank_repositories."""
+    ordered = sorted(snapshot.items(), key=lambda kv: (-kv[1], kv[0]))
+    return {full_name: idx for idx, (full_name, _) in enumerate(ordered, 1)}
+
+
+def load_previous_ranks(today: str, directory: str = HISTORY_DIR) -> dict | None:
+    """Load the most recent snapshot strictly before `today` (YYYY-MM-DD)
+    and return {full_name: rank}, or None when no history exists yet."""
+    if not os.path.isdir(directory):
+        return None
+    dates = sorted(
+        f[:-5]
+        for f in os.listdir(directory)
+        if f.endswith(".json") and f[:-5] < today
+    )
+    if not dates:
+        return None
+    with open(f"{directory}/{dates[-1]}.json", encoding="utf-8") as f:
+        return rank_from_snapshot(json.load(f))
+
+
+def annotate_previous_ranks(dataset: dict, previous_ranks: dict | None) -> dict:
+    """Add `previous_rank` (int, or None for repos absent from the previous
+    observation) to each repo. A repo missing from a snapshot is unknown,
+    not zero — with no previous snapshot at all, the field is omitted."""
+    if previous_ranks is None:
+        return dataset
+    for repo in dataset["repositories"]:
+        repo["previous_rank"] = previous_ranks.get(repo["full_name"])
+    return dataset
+
+
+def write_snapshot(dataset: dict, directory: str = HISTORY_DIR) -> None:
+    """Record today's observed star counts for future comparisons."""
+    os.makedirs(directory, exist_ok=True)
+    date = dataset["generated_at"][:10]
+    snapshot = {r["full_name"]: r["stars"] for r in dataset["repositories"]}
+    path = f"{directory}/{date}.json"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(snapshot, f, ensure_ascii=False, indent=2, sort_keys=True)
+        f.write("\n")
+    print(f"Wrote snapshot of {len(snapshot)} repositories to {path}.")
+
+
 def write_json(dataset: dict, path: str = JSON_FILE) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -195,39 +246,110 @@ def clean_cell(text: str, max_len: int = 140) -> str:
     return text
 
 
+def format_rank_change(repo: dict) -> str:
+    """Positions moved in the primary ranking since the previous snapshot
+    (never stars): NEW / ↑ n / ↓ n / —."""
+    previous = repo.get("previous_rank")
+    if previous is None:
+        return "NEW"
+    delta = previous - repo["rank"]
+    if delta > 0:
+        return f"↑ {delta}"
+    if delta < 0:
+        return f"↓ {-delta}"
+    return "—"
+
+
 def render_table(dataset: dict) -> str:
     criteria = dataset["criteria"]
     date_str = datetime.strptime(
         dataset["generated_at"], "%Y-%m-%dT%H:%M:%SZ"
     ).strftime("%Y-%m-%d %H:%M UTC")
+    # The Change column only appears once a previous snapshot exists.
+    has_history = any(
+        "previous_rank" in repo for repo in dataset["repositories"]
+    )
 
     lines = [
         f"*Last updated: **{date_str}** — repos with"
         f" >{criteria['min_stars']:,} stars, active in the last"
         f" {criteria['days_back']} days, no AI keywords detected.*",
         "",
-        "| # | Repository | ⭐ Stars | Language | Description |",
-        "|--:|------------|--------:|----------|-------------|",
     ]
+    if has_history:
+        lines += [
+            "| # | Change | Repository | ⭐ Stars | Language | Description |",
+            "|--:|:------:|------------|--------:|----------|-------------|",
+        ]
+    else:
+        lines += [
+            "| # | Repository | ⭐ Stars | Language | Description |",
+            "|--:|------------|--------:|----------|-------------|",
+        ]
     for repo in dataset["repositories"]:
         description = repo["description"] or "No description provided."
+        change = f" {format_rank_change(repo)} |" if has_history else ""
         lines.append(
-            f"| {repo['rank']} | [{repo['full_name']}]({repo['url']}) "
+            f"| {repo['rank']} |{change} [{repo['full_name']}]({repo['url']}) "
             f"| {repo['stars']:,} | {repo['language']} "
             f"| {clean_cell(description)} |"
         )
+    if has_history:
+        lines += [
+            "",
+            "*Change = positions moved in this list since the previous"
+            " update; NEW = not in the previous update.*",
+        ]
     return "\n".join(lines)
 
 
-def splice_markers(readme: str, replacement: str) -> str:
-    """Replace the content between the trending markers, idempotently."""
-    if START_MARKER not in readme or END_MARKER not in readme:
-        raise SystemExit(
-            f"Markers {START_MARKER} / {END_MARKER} not found in README"
-        )
-    head, rest = readme.split(START_MARKER, 1)
-    _, tail = rest.split(END_MARKER, 1)
-    return head + START_MARKER + "\n" + replacement + "\n" + END_MARKER + tail
+def render_language_sections(
+    dataset: dict,
+    max_languages: int = MAX_LANGUAGES,
+    max_repos: int = MAX_REPOS_PER_LANGUAGE,
+) -> str:
+    """Group the primary list by language: up to `max_languages` sections of
+    up to `max_repos` each. Repos without a detected language are skipped."""
+    by_language: dict[str, list[dict]] = {}
+    for repo in dataset["repositories"]:
+        if repo["language"] == "Unknown":
+            continue
+        by_language.setdefault(repo["language"], []).append(repo)
+
+    languages = sorted(
+        by_language, key=lambda lang: (-len(by_language[lang]), lang)
+    )[:max_languages]
+
+    lines = []
+    for language in languages:
+        lines += [
+            f"### {language}",
+            "",
+            "| Repository | ⭐ Stars | Description |",
+            "|------------|--------:|-------------|",
+        ]
+        for repo in by_language[language][:max_repos]:
+            description = repo["description"] or "No description provided."
+            lines.append(
+                f"| [{repo['full_name']}]({repo['url']}) "
+                f"| {repo['stars']:,} | {clean_cell(description)} |"
+            )
+        lines.append("")
+    return "\n".join(lines).rstrip()
+
+
+def splice_markers(
+    readme: str,
+    replacement: str,
+    start: str = START_MARKER,
+    end: str = END_MARKER,
+) -> str:
+    """Replace the content between a marker pair, idempotently."""
+    if start not in readme or end not in readme:
+        raise SystemExit(f"Markers {start} / {end} not found in README")
+    head, rest = readme.split(start, 1)
+    _, tail = rest.split(end, 1)
+    return head + start + "\n" + replacement + "\n" + end + tail
 
 
 def render_readme(dataset: dict, path: str = README_FILE) -> None:
@@ -235,6 +357,12 @@ def render_readme(dataset: dict, path: str = README_FILE) -> None:
         readme = f.read()
 
     updated = splice_markers(readme, render_table(dataset))
+    updated = splice_markers(
+        updated,
+        render_language_sections(dataset),
+        start=LANG_START_MARKER,
+        end=LANG_END_MARKER,
+    )
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(updated)
@@ -249,6 +377,10 @@ def main() -> None:
         print("No repositories found; leaving outputs untouched.")
         return
     dataset = build_dataset(repos)
+    # Compare against yesterday before recording today's observation.
+    previous_ranks = load_previous_ranks(dataset["generated_at"][:10])
+    annotate_previous_ranks(dataset, previous_ranks)
+    write_snapshot(dataset)
     write_json(dataset)
     render_readme(dataset)
 
