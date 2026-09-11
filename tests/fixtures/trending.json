@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-11T00:00:00Z",
+  "criteria": {
+    "min_stars": 100,
+    "days_back": 7
+  },
+  "filter": {
+    "type": "keyword",
+    "keywords": ["ai", "llm", "agent"]
+  },
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "example/mailer",
+      "url": "https://github.com/example/mailer",
+      "description": "A fast email server",
+      "stars": 12345,
+      "language": "Rust",
+      "updated_at": "2026-09-10"
+    },
+    {
+      "rank": 2,
+      "full_name": "example/kernel-tools",
+      "url": "https://github.com/example/kernel-tools",
+      "description": "Tools to maintain kernel modules | with pipes",
+      "stars": 6789,
+      "language": "C",
+      "updated_at": "2026-09-09"
+    },
+    {
+      "rank": 3,
+      "full_name": "example/mystery",
+      "url": "https://github.com/example/mystery",
+      "description": "",
+      "stars": 234,
+      "language": "Unknown",
+      "updated_at": "2026-09-08"
+    }
+  ]
+}
