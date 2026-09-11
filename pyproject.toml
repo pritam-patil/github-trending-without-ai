@@ -1,7 +1,7 @@
 [project]
 name = "github-trending-without-ai"
 version = "0.1.0"
-description = "GitHub trending, with the AI/LLM repos filtered out — auto-updated daily"
+description = "A non-AI view of GitHub Trending — discover open-source tools, libraries, languages, and projects trending right now."
 readme = "README.md"
 authors = [
     { name = "Pritam Patil", email = "pritam18@hotmail.com" }

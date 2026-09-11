@@ -1,23 +1,43 @@
-# 🚫🤖 Trending, Minus the AI
+# 🚫🤖 GitHub Trending, Minus the AI
 
-**GitHub trending for developers who want to see everything *except* AI.**
+[![Update trending list](https://github.com/pritam-patil/github-trending-without-ai/actions/workflows/update.yml/badge.svg)](https://github.com/pritam-patil/github-trending-without-ai/actions/workflows/update.yml)
+[![License](https://img.shields.io/github/license/pritam-patil/github-trending-without-ai)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/pritam-patil/github-trending-without-ai)](https://github.com/pritam-patil/github-trending-without-ai/stargazers)
 
-The front page of open source is drowning in LLM wrappers, agent frameworks,
-and prompt toolkits. This list surfaces what's *actually* being built and
-starred right now — with the AI projects filtered out — so you can find
-interesting tools, languages, and libraries again.
+**A non-AI view of GitHub Trending.**
+
+Discover **trending open-source repositories, developer tools, libraries,
+frameworks, and programming languages** — with AI/LLM-focused repositories
+filtered out by a transparent keyword rule, so you can find interesting
+tools, languages, and libraries again.
+
+> Daily updates · Open source · MIT
+
+## ⭐ What you'll find here
+
+- 🔥 Trending open-source repositories, refreshed every day
+- 🧰 Developer tools, libraries, and frameworks
+- 🦀 Rust, Go, Python, TypeScript, C++, and more
+- 🔍 A transparent, configurable keyword filter — AI-focused repos excluded
+- 🤝 Community-tunable: the keyword list lives in one file, open to PRs
+
+## Why?
+
+GitHub Trending currently features a lot of AI- and LLM-focused projects.
+That's useful when you're looking for AI — but open source is bigger than
+any one topic, and sometimes you just want to see what's happening across
+the rest of it.
+
+This project is a daily discovery feed for those days.
 
 ## How it works
 
 A daily GitHub Action queries the GitHub Search API for repositories with
-**more than 100 stars** that were **pushed to in the last 7 days**, then drops
-any repo whose name, description, or topics match AI keywords (`ai`, `llm`,
-`gpt`, `agent`, `rag`, `langchain`, and friends — matched on word boundaries,
-so `email` and `maintain` survive). What's left lands in the table below.
-
-It's a keyword filter, not a judgment call — some AI repos will slip through
-and some false positives will get dropped. [Open an
-issue](../../issues) if you spot either.
+**more than 100 stars** that were **pushed to in the last 7 days**, then sets
+aside any repo whose name, description, or topics match AI keywords (`ai`,
+`llm`, `gpt`, `agent`, `rag`, `langchain`, and friends — matched on word
+boundaries, so `email` and `maintain` survive). What's left lands in the
+table below.
 
 ## Trending non-AI repositories
 
@@ -82,6 +102,24 @@ issue](../../issues) if you spot either.
 | 54 | [3b1b/manim](https://github.com/3b1b/manim) | 93,743 | Python | Animation engine for explanatory math videos |
 <!-- TRENDING:END -->
 
+## 🔍 How the filter works
+
+This project does not attempt to determine whether a repository "really is
+AI." Instead, it uses transparent keyword matching against:
+
+- repository name
+- description
+- topics
+
+Keywords are matched on word boundaries (so `ai` never matches `email` or
+`maintain`), and the full list is configurable in
+[trending.py](trending.py).
+
+This intentionally favors a **simple, reproducible rule** over subjective
+classification. That means some AI repos will slip through and some non-AI
+repos will be excluded by accident — [open an issue](../../issues) if you
+spot either.
+
 ## Run it yourself
 
 Requires [uv](https://docs.astral.sh/uv/):
@@ -110,3 +148,10 @@ Tune `MIN_STARS`, `DAYS_BACK`, and `AI_KEYWORDS` at the top of
 ## License
 
 [MIT](LICENSE)
+
+---
+
+**If you use GitHub Trending and want a non-AI view of open source, give
+this repo a ⭐** — it helps other developers find it.
+
+Spot a filter miss? [Open an issue](../../issues).
