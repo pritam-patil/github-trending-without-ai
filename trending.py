@@ -1,4 +1,5 @@
-"""Fetch popular, recently-active GitHub repos and filter out AI/LLM projects."""
+"""Fetch popular, recently-active GitHub repos, filter out AI/LLM projects,
+and refresh the trending list embedded in README.md."""
 
 import os
 import re
@@ -11,7 +12,9 @@ import requests
 # 1. Configuration & Filtering Layout
 MIN_STARS = 100  # Minimum stars to consider a repo popular
 DAYS_BACK = 7  # Look at repos active in the last X days
-OUTPUT_FILE = "trending_non_ai_repos.md"
+README_FILE = "README.md"
+START_MARKER = "<!-- TRENDING:START -->"
+END_MARKER = "<!-- TRENDING:END -->"
 
 # Keywords used to identify and exclude AI/LLM bloat.
 # Matched on word boundaries so "ai" doesn't match "maintain" or "email".
@@ -34,6 +37,17 @@ AI_KEYWORDS = [
     "langchain",
     "llama",
     "stable diffusion",
+    "machine learning",
+    "deep learning",
+    "neural network",
+    "neural networks",
+    "ml",
+    "chatgpt",
+    "openai",
+    "gemini",
+    "diffusion",
+    "text-to-image",
+    "text-to-speech",
 ]
 
 AI_PATTERN = re.compile(
@@ -118,28 +132,58 @@ def fetch_non_ai_repos() -> list[dict]:
     return filtered_repos
 
 
-def generate_markdown(repos: list[dict]) -> None:
+def clean_cell(text: str, max_len: int = 140) -> str:
+    """Make a description safe for a markdown table cell."""
+    text = " ".join(text.split()).replace("|", "\\|")
+    if len(text) > max_len:
+        text = text[: max_len - 1].rstrip() + "…"
+    return text
+
+
+def render_table(repos: list[dict]) -> str:
+    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+    lines = [
+        f"*Last updated: **{date_str}** — repos with >{MIN_STARS:,} stars,"
+        f" active in the last {DAYS_BACK} days, no AI keywords detected.*",
+        "",
+        "| # | Repository | ⭐ Stars | Language | Description |",
+        "|--:|------------|--------:|----------|-------------|",
+    ]
+    for idx, repo in enumerate(repos, start=1):
+        lines.append(
+            f"| {idx} | [{repo['name']}]({repo['url']}) "
+            f"| {repo['stars']:,} | {repo['language']} "
+            f"| {clean_cell(repo['description'])} |"
+        )
+    return "\n".join(lines)
+
+
+def update_readme(repos: list[dict]) -> None:
     if not repos:
-        print("No repositories found matching the criteria.")
+        print("No repositories found; leaving README.md untouched.")
         return
 
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    with open(README_FILE, encoding="utf-8") as f:
+        readme = f.read()
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write("# Non-AI GitHub Trending Repositories\n")
-        f.write(f"*Generated on {date_str} (Looking back {DAYS_BACK} days)*\n\n")
+    if START_MARKER not in readme or END_MARKER not in readme:
+        raise SystemExit(
+            f"Markers {START_MARKER} / {END_MARKER} not found in {README_FILE}"
+        )
 
-        for idx, repo in enumerate(repos, start=1):
-            f.write(f"### {idx}. [{repo['name']}]({repo['url']})\n")
-            f.write(f"- **⭐ Stars:** {repo['stars']:,}\n")
-            f.write(f"- **💻 Language:** {repo['language']}\n")
-            f.write(f"- **📅 Last Active:** {repo['updated_at']}\n")
-            f.write(f"- **📝 Description:** {repo['description']}\n\n")
-            f.write("---\n\n")
+    head, rest = readme.split(START_MARKER, 1)
+    _, tail = rest.split(END_MARKER, 1)
+    updated = (
+        head + START_MARKER + "\n" + render_table(repos) + "\n" + END_MARKER + tail
+    )
 
-    print(f"Successfully saved {len(repos)} repositories to {OUTPUT_FILE}")
+    with open(README_FILE, "w", encoding="utf-8") as f:
+        f.write(updated)
+
+    print(f"Updated {README_FILE} with {len(repos)} repositories.")
 
 
 if __name__ == "__main__":
     repositories = fetch_non_ai_repos()
-    generate_markdown(repositories)
+    update_readme(repositories)
