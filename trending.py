@@ -16,7 +16,7 @@ README_FILE = "README.md"
 START_MARKER = "<!-- TRENDING:START -->"
 END_MARKER = "<!-- TRENDING:END -->"
 
-# Keywords used to identify and exclude AI/LLM bloat.
+# Keywords used to identify AI/LLM-focused repositories for exclusion.
 # Matched on word boundaries so "ai" doesn't match "maintain" or "email".
 AI_KEYWORDS = [
     "ai",
