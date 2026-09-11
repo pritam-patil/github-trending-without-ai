@@ -164,3 +164,73 @@ def test_splice_is_idempotent():
 def test_splice_fails_loudly_without_markers():
     with pytest.raises(SystemExit):
         trending.splice_markers("no markers here", "table")
+
+
+# --- history & rank movement ----------------------------------------------
+
+
+def write_snapshot_file(directory, date, snapshot):
+    (directory / f"{date}.json").write_text(json.dumps(snapshot))
+
+
+def test_no_history_means_no_change_column(tmp_path):
+    assert trending.load_previous_ranks("2026-09-11", str(tmp_path)) is None
+    table = trending.render_table(load_fixture())
+    assert "Change" not in table
+    assert "NEW" not in table
+
+
+def test_previous_ranks_come_from_latest_earlier_snapshot(tmp_path):
+    write_snapshot_file(tmp_path, "2026-09-09", {"a/old": 10})
+    write_snapshot_file(tmp_path, "2026-09-10", {"a/x": 200, "b/y": 100})
+    write_snapshot_file(tmp_path, "2026-09-11", {"a/x": 999})  # today: ignored
+    ranks = trending.load_previous_ranks("2026-09-11", str(tmp_path))
+    assert ranks == {"a/x": 1, "b/y": 2}
+
+
+def test_rank_change_rendering_up_down_new(tmp_path):
+    dataset = load_fixture()
+    # Previous day: kernel-tools led, mailer was second, mystery absent.
+    write_snapshot_file(
+        tmp_path,
+        "2026-09-10",
+        {"example/kernel-tools": 99999, "example/mailer": 12000},
+    )
+    previous = trending.load_previous_ranks("2026-09-11", str(tmp_path))
+    trending.annotate_previous_ranks(dataset, previous)
+    table = trending.render_table(dataset)
+    assert "| Change |" in table
+    rows = {r["full_name"]: trending.format_rank_change(r)
+            for r in dataset["repositories"]}
+    assert rows["example/mailer"] == "↑ 1"
+    assert rows["example/kernel-tools"] == "↓ 1"
+    assert rows["example/mystery"] == "NEW"  # absent = unknown, not zero
+
+
+# --- language sections ----------------------------------------------------
+
+
+def test_language_sections_group_and_skip_unknown():
+    sections = trending.render_language_sections(load_fixture())
+    assert "### Rust" in sections
+    assert "### C" in sections
+    assert "Unknown" not in sections
+    assert "example/mystery" not in sections
+
+
+def test_language_sections_respect_caps():
+    repos = trending.rank_repositories(
+        [
+            make_repo(full_name=f"o/repo{i}", language=f"Lang{i % 8}",
+                      stars=1000 - i)
+            for i in range(40)
+        ]
+    )
+    dataset = trending.build_dataset(
+        repos, generated_at="2026-09-11T00:00:00Z"
+    )
+    sections = trending.render_language_sections(
+        dataset, max_languages=3, max_repos=2
+    )
+    assert sections.count("### ") == 3
+    assert sections.count("| [o/") == 6

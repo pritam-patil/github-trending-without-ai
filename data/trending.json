@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-11T16:49:48Z",
+  "generated_at": "2026-09-11T16:52:04Z",
   "criteria": {
     "min_stars": 100,
     "days_back": 7
@@ -63,7 +63,7 @@
       "full_name": "EbookFoundation/free-programming-books",
       "url": "https://github.com/EbookFoundation/free-programming-books",
       "description": ":books: Freely available programming books",
-      "stars": 396528,
+      "stars": 396529,
       "language": "Python",
       "updated_at": "2026-09-10"
     },
@@ -72,7 +72,7 @@
       "full_name": "nilbuild/developer-roadmap",
       "url": "https://github.com/nilbuild/developer-roadmap",
       "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
-      "stars": 366898,
+      "stars": 366899,
       "language": "TypeScript",
       "updated_at": "2026-09-11"
     },
@@ -81,7 +81,7 @@
       "full_name": "awesome-selfhosted/awesome-selfhosted",
       "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
       "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
-      "stars": 318529,
+      "stars": 318530,
       "language": "Unknown",
       "updated_at": "2026-09-11"
     },
@@ -297,7 +297,7 @@
       "full_name": "rustdesk/rustdesk",
       "url": "https://github.com/rustdesk/rustdesk",
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
-      "stars": 123187,
+      "stars": 123188,
       "language": "Rust",
       "updated_at": "2026-09-11"
     },

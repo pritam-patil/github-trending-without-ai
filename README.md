@@ -42,15 +42,15 @@ table below.
 ## Trending non-AI repositories
 
 <!-- TRENDING:START -->
-*Last updated: **2026-09-11 16:49 UTC** — repos with >100 stars, active in the last 7 days, no AI keywords detected.*
+*Last updated: **2026-09-11 16:52 UTC** — repos with >100 stars, active in the last 7 days, no AI keywords detected.*
 
 | # | Repository | ⭐ Stars | Language | Description |
 |--:|------------|--------:|----------|-------------|
 | 1 | [public-apis/public-apis](https://github.com/public-apis/public-apis) | 478,920 | Python | A collective list of free APIs |
 | 2 | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 455,312 | TypeScript | freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free. |
-| 3 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 396,528 | Python | :books: Freely available programming books |
-| 4 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 366,898 | TypeScript | Interactive roadmaps, guides and other educational content to help developers grow in their careers. |
-| 5 | [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | 318,529 | Unknown | A list of Free Software network services and web applications which can be hosted on your own servers |
+| 3 | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 396,529 | Python | :books: Freely available programming books |
+| 4 | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 366,899 | TypeScript | Interactive roadmaps, guides and other educational content to help developers grow in their careers. |
+| 5 | [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | 318,530 | Unknown | A list of Free Software network services and web applications which can be hosted on your own servers |
 | 6 | [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 282,967 | Python | Curated list of project-based tutorials |
 | 7 | [react/react](https://github.com/react/react) | 250,039 | JavaScript | The library for web and native user interfaces. |
 | 8 | [torvalds/linux](https://github.com/torvalds/linux) | 248,253 | C | Linux kernel source tree |
@@ -74,7 +74,7 @@ table below.
 | 26 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 127,334 | Go | Production-Grade Container Scheduling and Management |
 | 27 | [react/react-native](https://github.com/react/react-native) | 126,556 | C++ | A framework for building native applications using React |
 | 28 | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | 123,574 | TypeScript | A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Op… |
-| 29 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 123,187 | Rust | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. |
+| 29 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 123,188 | Rust | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. |
 | 30 | [electron/electron](https://github.com/electron/electron) | 122,995 | C++ | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS |
 | 31 | [nodejs/node](https://github.com/nodejs/node) | 121,583 | JavaScript | Node.js JavaScript runtime ✨🐢🚀✨ |
 | 32 | [rust-lang/rust](https://github.com/rust-lang/rust) | 118,389 | Rust | Empowering everyone to build reliable and efficient software. |
@@ -101,6 +101,77 @@ table below.
 | 53 | [nvm-sh/nvm](https://github.com/nvm-sh/nvm) | 95,071 | Shell | Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions. $nvm: 3ArcxqLtXMmBnWbbtfwQgVL3MNnDsggzgGDtXM… |
 | 54 | [3b1b/manim](https://github.com/3b1b/manim) | 93,745 | Python | Animation engine for explanatory math videos |
 <!-- TRENDING:END -->
+
+## Trending by language
+
+<!-- BY_LANGUAGE:START -->
+### TypeScript
+
+| Repository | ⭐ Stars | Description |
+|------------|--------:|-------------|
+| [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 455,312 | freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free. |
+| [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 366,899 | Interactive roadmaps, guides and other educational content to help developers grow in their careers. |
+| [microsoft/vscode](https://github.com/microsoft/vscode) | 192,008 | Visual Studio Code |
+| [iptv-org/iptv](https://github.com/iptv-org/iptv) | 138,334 | Collection of publicly available IPTV channels from all over the world |
+| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 131,612 | Virtual whiteboard for sketching hand-drawn like diagrams |
+| [shadcn-ui/ui](https://github.com/shadcn-ui/ui) | 123,574 | A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Op… |
+| [immich-app/immich](https://github.com/immich-app/immich) | 113,842 | High performance self-hosted photo and video management solution. |
+| [angular/angular](https://github.com/angular/angular) | 100,993 | Deliver web apps with confidence 🚀 |
+| [ant-design/ant-design](https://github.com/ant-design/ant-design) | 99,480 | An enterprise-class UI design language and React UI library |
+| [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 97,500 | A utility-first CSS framework for rapid UI development. |
+
+### JavaScript
+
+| Repository | ⭐ Stars | Description |
+|------------|--------:|-------------|
+| [react/react](https://github.com/react/react) | 250,039 | The library for web and native user interfaces. |
+| [vercel/next.js](https://github.com/vercel/next.js) | 142,236 | The React Framework |
+| [Chalarangelo/30-seconds-of-code](https://github.com/Chalarangelo/30-seconds-of-code) | 129,036 | Coding articles to level up your development skills |
+| [nodejs/node](https://github.com/nodejs/node) | 121,583 | Node.js JavaScript runtime ✨🐢🚀✨ |
+| [mrdoob/three.js](https://github.com/mrdoob/three.js) | 115,410 | JavaScript 3D Library. |
+| [axios/axios](https://github.com/axios/axios) | 109,222 | Promise based HTTP client for the browser and node.js |
+| [mui/material-ui](https://github.com/mui/material-ui) | 99,027 | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. |
+
+### Rust
+
+| Repository | ⭐ Stars | Description |
+|------------|--------:|-------------|
+| [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) | 143,827 | A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience |
+| [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 123,188 | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. |
+| [rust-lang/rust](https://github.com/rust-lang/rust) | 118,389 | Empowering everyone to build reliable and efficient software. |
+| [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | 111,003 | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. |
+| [denoland/deno](https://github.com/denoland/deno) | 108,402 | A modern runtime for JavaScript and TypeScript. |
+| [oven-sh/bun](https://github.com/oven-sh/bun) | 95,943 | Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one |
+
+### Go
+
+| Repository | ⭐ Stars | Description |
+|------------|--------:|-------------|
+| [avelino/awesome-go](https://github.com/avelino/awesome-go) | 183,813 | A curated list of awesome Go frameworks, libraries and software |
+| [golang/go](https://github.com/golang/go) | 138,417 | The Go programming language |
+| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 127,334 | Production-Grade Container Scheduling and Management |
+| [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | 111,000 | TypeScript is a superset of JavaScript that compiles to clean JavaScript output. |
+| [fatedier/frp](https://github.com/fatedier/frp) | 109,345 | A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. |
+
+### Python
+
+| Repository | ⭐ Stars | Description |
+|------------|--------:|-------------|
+| [public-apis/public-apis](https://github.com/public-apis/public-apis) | 478,920 | A collective list of free APIs |
+| [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 396,529 | :books: Freely available programming books |
+| [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 282,967 | Curated list of project-based tutorials |
+| [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | 224,480 | All Algorithms implemented in Python |
+| [3b1b/manim](https://github.com/3b1b/manim) | 93,745 | Animation engine for explanatory math videos |
+
+### C++
+
+| Repository | ⭐ Stars | Description |
+|------------|--------:|-------------|
+| [react/react-native](https://github.com/react/react-native) | 126,556 | A framework for building native applications using React |
+| [electron/electron](https://github.com/electron/electron) | 122,995 | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS |
+| [godotengine/godot](https://github.com/godotengine/godot) | 116,971 | Godot Engine – Multi-platform 2D and 3D game engine |
+| [microsoft/terminal](https://github.com/microsoft/terminal) | 104,874 | The new Windows Terminal and the original Windows console host, all in the same place! |
+<!-- BY_LANGUAGE:END -->
 
 ## 🔍 How the filter works
 
