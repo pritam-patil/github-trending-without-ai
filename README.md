@@ -18,12 +18,15 @@ uv sync
 uv run trending.py
 ```
 
-Optionally set a GitHub token to raise the API rate limit (unauthenticated
-search is capped at 10 requests/minute):
+Authentication raises the GitHub API rate limit (unauthenticated search is
+capped at 10 requests/minute). The script picks up credentials automatically,
+in this order:
 
-```bash
-GITHUB_TOKEN=ghp_... uv run trending.py
-```
+1. A `GITHUB_TOKEN` environment variable, if set
+2. The [gh CLI](https://cli.github.com/)'s stored login (`gh auth token`),
+   if `gh` is installed and you've run `gh auth login`
+
+With neither, it still works on the anonymous rate limit.
 
 ## Configuration
 

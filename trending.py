@@ -2,6 +2,8 @@
 
 import os
 import re
+import shutil
+import subprocess
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -52,6 +54,18 @@ def is_ai_repo(repo: dict) -> bool:
     return AI_PATTERN.search(haystack) is not None
 
 
+def get_gh_cli_token() -> str | None:
+    """Get the GitHub token stored by the gh CLI, if gh is installed and logged in."""
+    if shutil.which("gh") is None:
+        return None
+    result = subprocess.run(
+        ["gh", "auth", "token"], capture_output=True, text=True
+    )
+    if result.returncode != 0:
+        return None
+    return result.stdout.strip() or None
+
+
 def fetch_non_ai_repos() -> list[dict]:
     # Calculate the date boundary for active repositories
     time_threshold = (
@@ -66,12 +80,14 @@ def fetch_non_ai_repos() -> list[dict]:
         "per_page": 100,
     }
 
-    # Optional: a GitHub Personal Access Token raises the rate limit.
-    # Generate one at: https://github.com/settings/tokens
+    # Auth is optional but raises the rate limit. Uses GITHUB_TOKEN if set,
+    # otherwise falls back to the gh CLI's stored login (`gh auth token`).
     headers = {"Accept": "application/vnd.github.v3+json"}
-    token = os.getenv("GITHUB_TOKEN")
+    token = os.getenv("GITHUB_TOKEN") or get_gh_cli_token()
     if token:
         headers["Authorization"] = f"token {token}"
+    else:
+        print("Warning: no auth found; using the low anonymous rate limit.")
 
     print(f"Fetching active repositories since {time_threshold}...")
     response = requests.get(url, params=params, headers=headers, timeout=30)
