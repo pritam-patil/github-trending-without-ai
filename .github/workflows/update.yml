@@ -25,11 +25,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Build website
+        run: uv run build_site.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md data/
+          git add README.md data/ docs/
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
