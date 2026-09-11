@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>54 open-source projects trending on GitHub today — minus AI-focused repos</title>
+<meta name="description" content="A non-AI view of GitHub Trending — discover open-source tools, libraries, languages, and projects trending right now.">
+<link rel="alternate" type="application/rss+xml" title="GitHub Trending, Minus the AI" href="feed.xml">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff; --fg: #1f2328; --muted: #656d76; --line: #d1d9e0;
+  --accent: #0969da; --chip: #f6f8fa; --up: #1a7f37; --down: #cf222e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117; --fg: #e6edf3; --muted: #8d96a0; --line: #30363d;
+    --accent: #4493f8; --chip: #161b22; --up: #3fb950; --down: #f85149;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif;
+}
+main { max-width: 900px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.updated { font-weight: 600; }
+.meta, .note { color: var(--muted); font-size: .85rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1.25rem 0; }
+.chip {
+  border: 1px solid var(--line); background: var(--chip); color: var(--fg);
+  border-radius: 999px; padding: .25rem .75rem; font-size: .82rem;
+  cursor: pointer;
+}
+.chip span { color: var(--muted); }
+.chip.active { border-color: var(--accent); color: var(--accent); }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td {
+  padding: .5rem .6rem; border-bottom: 1px solid var(--line);
+  text-align: left; vertical-align: top;
+}
+th { font-size: .8rem; color: var(--muted); text-transform: uppercase; }
+.rank, .stars { text-align: right; font-variant-numeric: tabular-nums; }
+.change { text-align: center; white-space: nowrap; font-size: .82rem; }
+.change.up { color: var(--up); }
+.change.down { color: var(--down); }
+.change.new { color: var(--accent); font-weight: 600; }
+.desc { display: block; color: var(--muted); font-size: .85rem; }
+.lang { white-space: nowrap; }
+footer {
+  margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .85rem;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>🚫🤖 GitHub Trending, Minus the AI</h1>
+<p><span class="updated">Updated daily · September 11, 2026</span><br>
+A non-AI view of GitHub Trending — discover open-source tools, libraries,
+languages, and projects trending right now.</p>
+<p class="meta">100+ stars · active within
+7 days · AI-focused repositories filtered using
+keyword matching · <a href="https://github.com/pritam-patil/github-trending-without-ai#-how-the-filter-works">methodology</a>
+· <a href="feed.xml">RSS</a></p>
+
+<div class="chips" hidden id="chips">
+<button class="chip active" data-lang="">All languages</button>
+<button class="chip" data-lang="TypeScript">TypeScript <span>12</span></button>
+<button class="chip" data-lang="JavaScript">JavaScript <span>7</span></button>
+<button class="chip" data-lang="Rust">Rust <span>6</span></button>
+<button class="chip" data-lang="Go">Go <span>5</span></button>
+<button class="chip" data-lang="Python">Python <span>5</span></button>
+<button class="chip" data-lang="C++">C++ <span>4</span></button>
+<button class="chip" data-lang="C">C <span>3</span></button>
+<button class="chip" data-lang="Shell">Shell <span>2</span></button>
+<button class="chip" data-lang="Batchfile">Batchfile <span>1</span></button>
+<button class="chip" data-lang="C#">C# <span>1</span></button>
+<button class="chip" data-lang="Dart">Dart <span>1</span></button>
+<button class="chip" data-lang="HTML">HTML <span>1</span></button>
+<button class="chip" data-lang="MDX">MDX <span>1</span></button>
+<button class="chip" data-lang="Swift">Swift <span>1</span></button>
+<button class="chip" data-lang="Vim Script">Vim Script <span>1</span></button>
+</div>
+
+<h2>Trending today</h2>
+<div class="table-wrap">
+<table id="trending">
+<thead><tr><th class="rank">#</th><th>Repository</th>
+<th class="stars">⭐ Stars</th><th>Language</th></tr></thead>
+<tbody>
+<tr data-lang="Python"><td class="rank">1</td><td><a href="https://github.com/public-apis/public-apis">public-apis/public-apis</a><span class="desc">A collective list of free APIs</span></td><td class="stars">478,920</td><td class="lang">Python</td></tr>
+<tr data-lang="TypeScript"><td class="rank">2</td><td><a href="https://github.com/freeCodeCamp/freeCodeCamp">freeCodeCamp/freeCodeCamp</a><span class="desc">freeCodeCamp.org&#x27;s open-source codebase and curriculum. Learn math, programming, and computer science for free.</span></td><td class="stars">455,312</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="Python"><td class="rank">3</td><td><a href="https://github.com/EbookFoundation/free-programming-books">EbookFoundation/free-programming-books</a><span class="desc">:books: Freely available programming books</span></td><td class="stars">396,529</td><td class="lang">Python</td></tr>
+<tr data-lang="TypeScript"><td class="rank">4</td><td><a href="https://github.com/nilbuild/developer-roadmap">nilbuild/developer-roadmap</a><span class="desc">Interactive roadmaps, guides and other educational content to help developers grow in their careers.</span></td><td class="stars">366,899</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="Unknown"><td class="rank">5</td><td><a href="https://github.com/awesome-selfhosted/awesome-selfhosted">awesome-selfhosted/awesome-selfhosted</a><span class="desc">A list of Free Software network services and web applications which can be hosted on your own servers</span></td><td class="stars">318,530</td><td class="lang">Unknown</td></tr>
+<tr data-lang="Python"><td class="rank">6</td><td><a href="https://github.com/practical-tutorials/project-based-learning">practical-tutorials/project-based-learning</a><span class="desc">Curated list of project-based tutorials</span></td><td class="stars">282,967</td><td class="lang">Python</td></tr>
+<tr data-lang="JavaScript"><td class="rank">7</td><td><a href="https://github.com/react/react">react/react</a><span class="desc">The library for web and native user interfaces.</span></td><td class="stars">250,039</td><td class="lang">JavaScript</td></tr>
+<tr data-lang="C"><td class="rank">8</td><td><a href="https://github.com/torvalds/linux">torvalds/linux</a><span class="desc">Linux kernel source tree</span></td><td class="stars">248,253</td><td class="lang">C</td></tr>
+<tr data-lang="Python"><td class="rank">9</td><td><a href="https://github.com/TheAlgorithms/Python">TheAlgorithms/Python</a><span class="desc">All Algorithms implemented in Python</span></td><td class="stars">224,480</td><td class="lang">Python</td></tr>
+<tr data-lang="TypeScript"><td class="rank">10</td><td><a href="https://github.com/microsoft/vscode">microsoft/vscode</a><span class="desc">Visual Studio Code</span></td><td class="stars">192,008</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="Batchfile"><td class="rank">11</td><td><a href="https://github.com/massgravel/Microsoft-Activation-Scripts">massgravel/Microsoft-Activation-Scripts</a><span class="desc">Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting.</span></td><td class="stars">190,193</td><td class="lang">Batchfile</td></tr>
+<tr data-lang="Shell"><td class="rank">12</td><td><a href="https://github.com/ohmyzsh/ohmyzsh">ohmyzsh/ohmyzsh</a><span class="desc">🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.</span></td><td class="stars">189,670</td><td class="lang">Shell</td></tr>
+<tr data-lang="Go"><td class="rank">13</td><td><a href="https://github.com/avelino/awesome-go">avelino/awesome-go</a><span class="desc">A curated list of awesome Go frameworks, libraries and software</span></td><td class="stars">183,813</td><td class="lang">Go</td></tr>
+<tr data-lang="Dart"><td class="rank">14</td><td><a href="https://github.com/flutter/flutter">flutter/flutter</a><span class="desc">Flutter makes it easy and fast to build beautiful apps for mobile and beyond</span></td><td class="stars">178,894</td><td class="lang">Dart</td></tr>
+<tr data-lang="Unknown"><td class="rank">15</td><td><a href="https://github.com/github/gitignore">github/gitignore</a><span class="desc">A collection of useful .gitignore templates</span></td><td class="stars">175,713</td><td class="lang">Unknown</td></tr>
+<tr data-lang="MDX"><td class="rank">16</td><td><a href="https://github.com/twbs/bootstrap">twbs/bootstrap</a><span class="desc">The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</span></td><td class="stars">174,758</td><td class="lang">MDX</td></tr>
+<tr data-lang="C"><td class="rank">17</td><td><a href="https://github.com/Genymobile/scrcpy">Genymobile/scrcpy</a><span class="desc">Display and control your Android device</span></td><td class="stars">149,393</td><td class="lang">C</td></tr>
+<tr data-lang="Rust"><td class="rank">18</td><td><a href="https://github.com/clash-verge-rev/clash-verge-rev">clash-verge-rev/clash-verge-rev</a><span class="desc">A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience</span></td><td class="stars">143,827</td><td class="lang">Rust</td></tr>
+<tr data-lang="JavaScript"><td class="rank">19</td><td><a href="https://github.com/vercel/next.js">vercel/next.js</a><span class="desc">The React Framework</span></td><td class="stars">142,236</td><td class="lang">JavaScript</td></tr>
+<tr data-lang="C"><td class="rank">20</td><td><a href="https://github.com/microsoft/PowerToys">microsoft/PowerToys</a><span class="desc">Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows</span></td><td class="stars">138,560</td><td class="lang">C</td></tr>
+<tr data-lang="Go"><td class="rank">21</td><td><a href="https://github.com/golang/go">golang/go</a><span class="desc">The Go programming language</span></td><td class="stars">138,417</td><td class="lang">Go</td></tr>
+<tr data-lang="TypeScript"><td class="rank">22</td><td><a href="https://github.com/iptv-org/iptv">iptv-org/iptv</a><span class="desc">Collection of publicly available IPTV channels from all over the world</span></td><td class="stars">138,334</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="HTML"><td class="rank">23</td><td><a href="https://github.com/ripienaar/free-for-dev">ripienaar/free-for-dev</a><span class="desc">A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev</span></td><td class="stars">137,132</td><td class="lang">HTML</td></tr>
+<tr data-lang="TypeScript"><td class="rank">24</td><td><a href="https://github.com/excalidraw/excalidraw">excalidraw/excalidraw</a><span class="desc">Virtual whiteboard for sketching hand-drawn like diagrams</span></td><td class="stars">131,612</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="JavaScript"><td class="rank">25</td><td><a href="https://github.com/Chalarangelo/30-seconds-of-code">Chalarangelo/30-seconds-of-code</a><span class="desc">Coding articles to level up your development skills</span></td><td class="stars">129,036</td><td class="lang">JavaScript</td></tr>
+<tr data-lang="Go"><td class="rank">26</td><td><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><span class="desc">Production-Grade Container Scheduling and Management</span></td><td class="stars">127,334</td><td class="lang">Go</td></tr>
+<tr data-lang="C++"><td class="rank">27</td><td><a href="https://github.com/react/react-native">react/react-native</a><span class="desc">A framework for building native applications using React</span></td><td class="stars">126,556</td><td class="lang">C++</td></tr>
+<tr data-lang="TypeScript"><td class="rank">28</td><td><a href="https://github.com/shadcn-ui/ui">shadcn-ui/ui</a><span class="desc">A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.</span></td><td class="stars">123,574</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="Rust"><td class="rank">29</td><td><a href="https://github.com/rustdesk/rustdesk">rustdesk/rustdesk</a><span class="desc">An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.</span></td><td class="stars">123,188</td><td class="lang">Rust</td></tr>
+<tr data-lang="C++"><td class="rank">30</td><td><a href="https://github.com/electron/electron">electron/electron</a><span class="desc">:electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS</span></td><td class="stars">122,995</td><td class="lang">C++</td></tr>
+<tr data-lang="JavaScript"><td class="rank">31</td><td><a href="https://github.com/nodejs/node">nodejs/node</a><span class="desc">Node.js JavaScript runtime ✨🐢🚀✨</span></td><td class="stars">121,583</td><td class="lang">JavaScript</td></tr>
+<tr data-lang="Rust"><td class="rank">32</td><td><a href="https://github.com/rust-lang/rust">rust-lang/rust</a><span class="desc">Empowering everyone to build reliable and efficient software.</span></td><td class="stars">118,389</td><td class="lang">Rust</td></tr>
+<tr data-lang="C++"><td class="rank">33</td><td><a href="https://github.com/godotengine/godot">godotengine/godot</a><span class="desc">Godot Engine – Multi-platform 2D and 3D game engine</span></td><td class="stars">116,971</td><td class="lang">C++</td></tr>
+<tr data-lang="C#"><td class="rank">34</td><td><a href="https://github.com/2dust/v2rayN">2dust/v2rayN</a><span class="desc">A GUI client for Windows, Linux and macOS, support Xray and sing-box and others</span></td><td class="stars">115,916</td><td class="lang">C#</td></tr>
+<tr data-lang="JavaScript"><td class="rank">35</td><td><a href="https://github.com/mrdoob/three.js">mrdoob/three.js</a><span class="desc">JavaScript 3D Library.</span></td><td class="stars">115,410</td><td class="lang">JavaScript</td></tr>
+<tr data-lang="TypeScript"><td class="rank">36</td><td><a href="https://github.com/immich-app/immich">immich-app/immich</a><span class="desc">High performance self-hosted photo and video management solution.</span></td><td class="stars">113,842</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="Swift"><td class="rank">37</td><td><a href="https://github.com/jaywcjlove/awesome-mac">jaywcjlove/awesome-mac</a><span class="desc"> This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy search and use.</span></td><td class="stars">113,563</td><td class="lang">Swift</td></tr>
+<tr data-lang="Rust"><td class="rank">38</td><td><a href="https://github.com/tauri-apps/tauri">tauri-apps/tauri</a><span class="desc">Build smaller, faster, and more secure desktop and mobile applications with a web frontend.</span></td><td class="stars">111,003</td><td class="lang">Rust</td></tr>
+<tr data-lang="Go"><td class="rank">39</td><td><a href="https://github.com/microsoft/TypeScript">microsoft/TypeScript</a><span class="desc">TypeScript is a superset of JavaScript that compiles to clean JavaScript output.</span></td><td class="stars">111,000</td><td class="lang">Go</td></tr>
+<tr data-lang="Go"><td class="rank">40</td><td><a href="https://github.com/fatedier/frp">fatedier/frp</a><span class="desc">A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.</span></td><td class="stars">109,345</td><td class="lang">Go</td></tr>
+<tr data-lang="JavaScript"><td class="rank">41</td><td><a href="https://github.com/axios/axios">axios/axios</a><span class="desc">Promise based HTTP client for the browser and node.js</span></td><td class="stars">109,222</td><td class="lang">JavaScript</td></tr>
+<tr data-lang="Rust"><td class="rank">42</td><td><a href="https://github.com/denoland/deno">denoland/deno</a><span class="desc">A modern runtime for JavaScript and TypeScript.</span></td><td class="stars">108,402</td><td class="lang">Rust</td></tr>
+<tr data-lang="C++"><td class="rank">43</td><td><a href="https://github.com/microsoft/terminal">microsoft/terminal</a><span class="desc">The new Windows Terminal and the original Windows console host, all in the same place!</span></td><td class="stars">104,874</td><td class="lang">C++</td></tr>
+<tr data-lang="Unknown"><td class="rank">44</td><td><a href="https://github.com/ruanyf/weekly">ruanyf/weekly</a><span class="desc">科技爱好者周刊，每周五发布</span></td><td class="stars">102,353</td><td class="lang">Unknown</td></tr>
+<tr data-lang="Vim Script"><td class="rank">45</td><td><a href="https://github.com/neovim/neovim">neovim/neovim</a><span class="desc">Vim-fork focused on extensibility and usability</span></td><td class="stars">102,270</td><td class="lang">Vim Script</td></tr>
+<tr data-lang="TypeScript"><td class="rank">46</td><td><a href="https://github.com/angular/angular">angular/angular</a><span class="desc">Deliver web apps with confidence 🚀</span></td><td class="stars">100,993</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="TypeScript"><td class="rank">47</td><td><a href="https://github.com/ant-design/ant-design">ant-design/ant-design</a><span class="desc">An enterprise-class UI design language and React UI library</span></td><td class="stars">99,480</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="JavaScript"><td class="rank">48</td><td><a href="https://github.com/mui/material-ui">mui/material-ui</a><span class="desc">Material UI: Comprehensive React component library that implements Google&#x27;s Material Design. Free forever.</span></td><td class="stars">99,027</td><td class="lang">JavaScript</td></tr>
+<tr data-lang="TypeScript"><td class="rank">49</td><td><a href="https://github.com/tailwindlabs/tailwindcss">tailwindlabs/tailwindcss</a><span class="desc">A utility-first CSS framework for rapid UI development.</span></td><td class="stars">97,500</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="TypeScript"><td class="rank">50</td><td><a href="https://github.com/microsoft/playwright">microsoft/playwright</a><span class="desc">Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. </span></td><td class="stars">95,978</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="Rust"><td class="rank">51</td><td><a href="https://github.com/oven-sh/bun">oven-sh/bun</a><span class="desc">Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one</span></td><td class="stars">95,943</td><td class="lang">Rust</td></tr>
+<tr data-lang="TypeScript"><td class="rank">52</td><td><a href="https://github.com/puppeteer/puppeteer">puppeteer/puppeteer</a><span class="desc">JavaScript API for Chrome and Firefox</span></td><td class="stars">95,574</td><td class="lang">TypeScript</td></tr>
+<tr data-lang="Shell"><td class="rank">53</td><td><a href="https://github.com/nvm-sh/nvm">nvm-sh/nvm</a><span class="desc">Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions. $nvm: 3ArcxqLtXMmBnWbbtfwQgVL3MNnDsggzgGDtXMnjpump</span></td><td class="stars">95,071</td><td class="lang">Shell</td></tr>
+<tr data-lang="Python"><td class="rank">54</td><td><a href="https://github.com/3b1b/manim">3b1b/manim</a><span class="desc">Animation engine for explanatory math videos</span></td><td class="stars">93,745</td><td class="lang">Python</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<h2>How it works</h2>
+<p>A daily GitHub Action queries the GitHub Search API for repositories
+with more than 100 stars that were pushed to in the
+last 7 days, then sets aside any repo whose name,
+description, or topics match a transparent, configurable list of AI
+keywords — matched on word boundaries, so <code>email</code> and
+<code>maintain</code> survive. It's a simple, reproducible rule, not a
+judgment call.</p>
+
+<footer>
+<p>Open-source engine: <a href="https://github.com/pritam-patil/github-trending-without-ai">pritam-patil/github-trending-without-ai</a>
+— spot a filter miss? <a href="https://github.com/pritam-patil/github-trending-without-ai/issues">Open an issue</a>.<br>
+Data: <a href="data/trending.json">trending.json</a> · MIT licensed.</p>
+</footer>
+</main>
+<script>
+(function () {
+  var chips = document.getElementById("chips");
+  chips.hidden = false;
+  chips.addEventListener("click", function (e) {
+    var chip = e.target.closest(".chip");
+    if (!chip) return;
+    chips.querySelectorAll(".chip").forEach(function (c) {
+      c.classList.toggle("active", c === chip);
+    });
+    var lang = chip.dataset.lang;
+    document.querySelectorAll("#trending tbody tr").forEach(function (row) {
+      row.hidden = Boolean(lang) && row.dataset.lang !== lang;
+    });
+  });
+})();
+</script>
+</body>
+</html>

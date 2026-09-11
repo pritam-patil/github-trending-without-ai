@@ -12,6 +12,10 @@ filtered out by a transparent keyword rule, so you can find interesting
 tools, languages, and libraries again.
 
 > Daily updates · Open source · MIT
+>
+> 🌐 **Browse the list on the website:**
+> [pritam-patil.github.io/github-trending-without-ai](https://pritam-patil.github.io/github-trending-without-ai/)
+> · [RSS feed](https://pritam-patil.github.io/github-trending-without-ai/feed.xml)
 
 ## ⭐ What you'll find here
 
