@@ -40,6 +40,28 @@ def test_feed_is_a_single_daily_item():
     assert "example/mailer" in feed
 
 
+def test_index_defaults_to_new_view_when_fresh_nonempty():
+    page = build_site.render_index(load_fixture())
+    assert 'id="view-fresh">' in page
+    assert 'id="view-repos" hidden>' in page
+    assert "example/newcomer" in page
+
+
+def test_index_falls_back_to_all_projects_when_no_fresh():
+    dataset = load_fixture()
+    dataset["fresh_repositories"] = []
+    page = build_site.render_index(dataset)
+    assert 'id="view-fresh" hidden>' in page
+    assert 'id="view-repos">' in page
+
+
+def test_index_tolerates_missing_fresh_key():
+    dataset = load_fixture()
+    del dataset["fresh_repositories"]
+    page = build_site.render_index(dataset)
+    assert 'id="view-repos">' in page
+
+
 def test_build_writes_site_and_data_copy(tmp_path):
     build_site.build(str(FIXTURE), str(tmp_path))
     assert (tmp_path / "index.html").exists()

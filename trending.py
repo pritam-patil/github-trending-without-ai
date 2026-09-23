@@ -21,6 +21,8 @@ import requests
 SCHEMA_VERSION = 1  # Only additive changes within a version; breaking changes bump it.
 MIN_STARS = 100  # Minimum stars to consider a repo popular
 DAYS_BACK = 7  # Look at repos active in the last X days
+FRESH_DAYS = 365  # A repo created within this window counts as "new"
+MAX_FRESH_README_ROWS = 15  # Soft cap for the README's New & rising table
 README_FILE = "README.md"
 JSON_FILE = "data/trending.json"
 HISTORY_DIR = "data/history"
@@ -28,6 +30,8 @@ START_MARKER = "<!-- TRENDING:START -->"
 END_MARKER = "<!-- TRENDING:END -->"
 LANG_START_MARKER = "<!-- BY_LANGUAGE:START -->"
 LANG_END_MARKER = "<!-- BY_LANGUAGE:END -->"
+FRESH_START_MARKER = "<!-- FRESH:START -->"
+FRESH_END_MARKER = "<!-- FRESH:END -->"
 MAX_LANGUAGES = 6  # Soft caps for the by-language README sections
 MAX_REPOS_PER_LANGUAGE = 10
 
@@ -83,15 +87,22 @@ def get_gh_cli_token() -> str | None:
     return result.stdout.strip() or None
 
 
-def fetch_repositories() -> list[dict]:
-    """Fetch raw search results from the GitHub Search API."""
-    time_threshold = (
-        datetime.now(timezone.utc) - timedelta(days=DAYS_BACK)
-    ).strftime("%Y-%m-%d")
+def fetch_repositories(created_within: int | None = None) -> list[dict]:
+    """Fetch raw search results from the GitHub Search API. With
+    `created_within`, restrict to repos created in the last N days."""
+    now = datetime.now(timezone.utc)
+    time_threshold = (now - timedelta(days=DAYS_BACK)).strftime("%Y-%m-%d")
+
+    query = f"stars:>{MIN_STARS} pushed:>{time_threshold}"
+    if created_within is not None:
+        created_threshold = (
+            now - timedelta(days=created_within)
+        ).strftime("%Y-%m-%d")
+        query += f" created:>{created_threshold}"
 
     url = "https://api.github.com/search/repositories"
     params = {
-        "q": f"stars:>{MIN_STARS} pushed:>{time_threshold}",
+        "q": query,
         "sort": "stars",
         "order": "desc",
         "per_page": 100,
@@ -131,6 +142,7 @@ def normalize_repository(item: dict) -> dict:
         "stars": item.get("stargazers_count") or 0,
         "language": item.get("language") or "Unknown",
         "updated_at": (item.get("pushed_at") or "")[:10],
+        "created_at": (item.get("created_at") or "")[:10],
         "topics": item.get("topics") or [],
     }
 
@@ -160,27 +172,39 @@ def rank_repositories(repos: list[dict]) -> list[dict]:
     return ranked
 
 
-def build_dataset(repos: list[dict], generated_at: str | None = None) -> dict:
-    """Assemble the canonical schema-versioned dataset."""
+def dataset_entry(repo: dict) -> dict:
+    return {
+        "rank": repo["rank"],
+        "full_name": repo["full_name"],
+        "url": repo["url"],
+        "description": repo["description"],
+        "stars": repo["stars"],
+        "language": repo["language"],
+        "updated_at": repo["updated_at"],
+        "created_at": repo.get("created_at", ""),
+    }
+
+
+def build_dataset(
+    repos: list[dict],
+    generated_at: str | None = None,
+    fresh: list[dict] | None = None,
+) -> dict:
+    """Assemble the canonical schema-versioned dataset. `fresh` is the
+    separately fetched list of repos created within FRESH_DAYS."""
     if generated_at is None:
         generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     return {
         "schema_version": SCHEMA_VERSION,
         "generated_at": generated_at,
-        "criteria": {"min_stars": MIN_STARS, "days_back": DAYS_BACK},
+        "criteria": {
+            "min_stars": MIN_STARS,
+            "days_back": DAYS_BACK,
+            "fresh_days": FRESH_DAYS,
+        },
         "filter": {"type": "keyword", "keywords": AI_KEYWORDS},
-        "repositories": [
-            {
-                "rank": repo["rank"],
-                "full_name": repo["full_name"],
-                "url": repo["url"],
-                "description": repo["description"],
-                "stars": repo["stars"],
-                "language": repo["language"],
-                "updated_at": repo["updated_at"],
-            }
-            for repo in repos
-        ],
+        "repositories": [dataset_entry(repo) for repo in repos],
+        "fresh_repositories": [dataset_entry(repo) for repo in fresh or []],
     }
 
 
@@ -338,6 +362,31 @@ def render_language_sections(
     return "\n".join(lines).rstrip()
 
 
+def render_fresh_section(
+    dataset: dict, max_rows: int = MAX_FRESH_README_ROWS
+) -> str:
+    """Markdown table of trending repos created within the fresh window."""
+    fresh = dataset.get("fresh_repositories", [])[:max_rows]
+    if not fresh:
+        return (
+            "*No repositories created in the last year met the criteria"
+            " today.*"
+        )
+    lines = [
+        "| # | Repository | ⭐ Stars | Language | Created | Description |",
+        "|--:|------------|--------:|----------|---------|-------------|",
+    ]
+    for repo in fresh:
+        description = repo["description"] or "No description provided."
+        lines.append(
+            f"| {repo['rank']} | [{repo['full_name']}]({repo['url']}) "
+            f"| {repo['stars']:,} | {repo['language']} "
+            f"| {repo.get('created_at', '') or '—'} "
+            f"| {clean_cell(description)} |"
+        )
+    return "\n".join(lines)
+
+
 def splice_markers(
     readme: str,
     replacement: str,
@@ -359,6 +408,12 @@ def render_readme(dataset: dict, path: str = README_FILE) -> None:
     updated = splice_markers(readme, render_table(dataset))
     updated = splice_markers(
         updated,
+        render_fresh_section(dataset),
+        start=FRESH_START_MARKER,
+        end=FRESH_END_MARKER,
+    )
+    updated = splice_markers(
+        updated,
         render_language_sections(dataset),
         start=LANG_START_MARKER,
         end=LANG_END_MARKER,
@@ -376,7 +431,11 @@ def main() -> None:
     if not repos:
         print("No repositories found; leaving outputs untouched.")
         return
-    dataset = build_dataset(repos)
+    fresh_items = fetch_repositories(created_within=FRESH_DAYS)
+    fresh = rank_repositories(
+        filter_repositories(normalize_repositories(fresh_items))
+    )
+    dataset = build_dataset(repos, fresh=fresh)
     # Compare against yesterday before recording today's observation.
     previous_ranks = load_previous_ranks(dataset["generated_at"][:10])
     annotate_previous_ranks(dataset, previous_ranks)

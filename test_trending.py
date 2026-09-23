@@ -20,6 +20,7 @@ def make_repo(**overrides) -> dict:
         "stars": 500,
         "language": "Rust",
         "updated_at": "2026-09-10",
+        "created_at": "2020-01-01",
         "topics": [],
     }
     repo.update(overrides)
@@ -93,6 +94,14 @@ def test_normalize_tolerates_absent_keys():
     assert repo["stars"] == 0
     assert repo["url"] == ""
     assert repo["updated_at"] == ""
+    assert repo["created_at"] == ""
+
+
+def test_normalize_fills_created_at():
+    repo = trending.normalize_repository(
+        {"full_name": "owner/x", "created_at": "2026-01-02T03:04:05Z"}
+    )
+    assert repo["created_at"] == "2026-01-02"
 
 
 # --- ranking & dataset ----------------------------------------------------
@@ -119,6 +128,27 @@ def test_build_dataset_is_deterministic_given_fixed_timestamp():
     b = trending.build_dataset(repos, generated_at="2026-09-11T00:00:00Z")
     assert json.dumps(a, sort_keys=True) == json.dumps(b, sort_keys=True)
     assert a["schema_version"] == trending.SCHEMA_VERSION
+
+
+def test_build_dataset_defaults_fresh_repositories_to_empty():
+    repos = trending.rank_repositories([make_repo()])
+    dataset = trending.build_dataset(repos, generated_at="2026-09-11T00:00:00Z")
+    assert dataset["fresh_repositories"] == []
+    assert dataset["criteria"]["fresh_days"] == trending.FRESH_DAYS
+
+
+def test_build_dataset_includes_fresh_repositories():
+    repos = trending.rank_repositories([make_repo()])
+    fresh = trending.rank_repositories(
+        [make_repo(full_name="new/thing", created_at="2026-01-01")]
+    )
+    dataset = trending.build_dataset(
+        repos, generated_at="2026-09-11T00:00:00Z", fresh=fresh
+    )
+    assert len(dataset["fresh_repositories"]) == 1
+    assert dataset["fresh_repositories"][0]["full_name"] == "new/thing"
+    assert dataset["fresh_repositories"][0]["created_at"] == "2026-01-01"
+    assert dataset["fresh_repositories"][0]["rank"] == 1
 
 
 # --- rendering ------------------------------------------------------------
@@ -164,6 +194,56 @@ def test_splice_is_idempotent():
 def test_splice_fails_loudly_without_markers():
     with pytest.raises(SystemExit):
         trending.splice_markers("no markers here", "table")
+
+
+# --- fresh (new & rising) section -----------------------------------------
+
+
+def test_fresh_section_renders_between_markers():
+    section = trending.render_fresh_section(load_fixture())
+    assert "example/newcomer" in section
+    assert "2026-03-12" in section
+
+
+def test_fresh_section_handles_no_fresh_repos():
+    dataset = load_fixture()
+    dataset["fresh_repositories"] = []
+    section = trending.render_fresh_section(dataset)
+    assert "No repositories" in section
+
+
+def test_fresh_section_respects_row_cap():
+    fresh = [
+        {
+            "rank": i,
+            "full_name": f"o/repo{i}",
+            "url": f"https://github.com/o/repo{i}",
+            "description": "",
+            "stars": 100 - i,
+            "language": "Go",
+            "updated_at": "2026-09-10",
+            "created_at": "2026-01-01",
+        }
+        for i in range(1, 21)
+    ]
+    dataset = {"fresh_repositories": fresh}
+    section = trending.render_fresh_section(dataset, max_rows=5)
+    assert section.count("| [o/repo") == 5
+
+
+def test_readme_splices_fresh_section():
+    readme = (
+        f"intro\n{trending.FRESH_START_MARKER}\nold\n"
+        f"{trending.FRESH_END_MARKER}\noutro"
+    )
+    result = trending.splice_markers(
+        readme,
+        trending.render_fresh_section(load_fixture()),
+        start=trending.FRESH_START_MARKER,
+        end=trending.FRESH_END_MARKER,
+    )
+    assert "example/newcomer" in result
+    assert "old" not in result
 
 
 # --- history & rank movement ----------------------------------------------

@@ -144,11 +144,17 @@ def repo_title(repo: dict) -> str:
     )
 
 
-def render_rows(dataset: dict, has_history: bool) -> str:
+def render_rows(
+    repos: list[dict],
+    has_history: bool,
+    date_prefix: str = "Active",
+    date_field: str = "updated_at",
+) -> str:
     rows = []
-    for repo in dataset["repositories"]:
+    for repo in repos:
         description = repo["description"] or "No description provided."
         change = render_change(repo) if has_history else ""
+        date_value = repo.get(date_field) or ""
         rows.append(
             f'<article class="row" data-lang="{esc(repo["language"])}">'
             f'<div class="rank">{repo["rank"]}</div>'
@@ -159,8 +165,8 @@ def render_rows(dataset: dict, has_history: bool) -> str:
             '<div class="meta">'
             f'<span class="meta-item">{language_dot(repo["language"])}</span>'
             f'<span class="meta-item">{ICON_STAR}{repo["stars"]:,}</span>'
-            f'<span class="meta-item active-date">Active'
-            f' {esc(repo["updated_at"])}</span>'
+            f'<span class="meta-item active-date">{esc(date_prefix)}'
+            f" {esc(date_value)}</span>"
             "</div></div>"
             '<div class="row-side">'
             f'<a class="star-btn" href="{esc(repo["url"])}">{ICON_STAR}'
@@ -206,12 +212,23 @@ def render_index(dataset: dict) -> str:
     date_long = generated.strftime("%B %-d, %Y")
     criteria = dataset["criteria"]
     repos = dataset["repositories"]
+    fresh = dataset.get("fresh_repositories", [])
     has_history = any("previous_rank" in r for r in repos)
+    # New projects are the default view; fall back to the full list on a
+    # day when nothing created recently meets the criteria.
+    default_fresh = bool(fresh)
 
     options = ['<option value="">Any</option>'] + [
         f'<option value="{esc(lang)}">{esc(lang)} ({count})</option>'
         for lang, count in language_counts(dataset)
     ]
+    show_options = (
+        f'<option value="new"{" selected" if default_fresh else ""}'
+        f'{" disabled" if not fresh else ""}>New — past year'
+        f" ({len(fresh)})</option>"
+        f'<option value="all"{"" if default_fresh else " selected"}>'
+        f"All projects ({len(repos)})</option>"
+    )
 
     title = (
         f"{len(repos)} open-source projects trending on GitHub today"
@@ -399,16 +416,23 @@ rule.</p>
 <button class="segment" type="button" data-view="langs">By language</button>
 </div>
 <div class="toolbar-filters">
+<label for="show-filter">Show:
+<select id="show-filter">
+{show_options}
+</select></label>
 <label for="lang-filter">Language:
 <select id="lang-filter">
 {"".join(options)}
 </select></label>
-<span>Date range: <strong>Today</strong></span>
 </div>
 </div>
 
-<div id="view-repos">
-{render_rows(dataset, has_history)}
+<div id="view-fresh"{"" if default_fresh else " hidden"}>
+{render_rows(fresh, False, date_prefix="Created", date_field="created_at")}
+</div>
+
+<div id="view-repos"{" hidden" if default_fresh else ""}>
+{render_rows(repos, has_history)}
 </div>
 
 <div id="view-langs" hidden>
@@ -416,7 +440,7 @@ rule.</p>
 </div>
 
 <div class="box-footer">
-<span>{len(repos)} repositories today</span>
+<span>{len(fresh)} new · {len(repos)} total today</span>
 <a href="data/trending.json">Data (JSON)</a>
 </div>
 </div>
@@ -433,9 +457,21 @@ one file, open to pull requests.</p>
 <script>
 (function () {{
   var tabs = document.getElementById("tabs");
+  var viewFresh = document.getElementById("view-fresh");
   var viewRepos = document.getElementById("view-repos");
   var viewLangs = document.getElementById("view-langs");
   var filter = document.getElementById("lang-filter");
+  var show = document.getElementById("show-filter");
+  var onLangsTab = false;
+
+  function syncViews() {{
+    var fresh = show.value === "new";
+    viewLangs.hidden = !onLangsTab;
+    viewFresh.hidden = onLangsTab || !fresh;
+    viewRepos.hidden = onLangsTab || fresh;
+    show.disabled = onLangsTab;
+    filter.disabled = onLangsTab;
+  }}
 
   tabs.addEventListener("click", function (e) {{
     var button = e.target.closest(".segment");
@@ -443,15 +479,17 @@ one file, open to pull requests.</p>
     tabs.querySelectorAll(".segment").forEach(function (b) {{
       b.classList.toggle("active", b === button);
     }});
-    var langs = button.dataset.view === "langs";
-    viewRepos.hidden = langs;
-    viewLangs.hidden = !langs;
-    filter.disabled = langs;
+    onLangsTab = button.dataset.view === "langs";
+    syncViews();
   }});
+
+  show.addEventListener("change", syncViews);
 
   filter.addEventListener("change", function () {{
     var lang = filter.value;
-    viewRepos.querySelectorAll(".row").forEach(function (row) {{
+    document.querySelectorAll(
+      "#view-fresh .row, #view-repos .row"
+    ).forEach(function (row) {{
       row.hidden = Boolean(lang) && row.dataset.lang !== lang;
     }});
   }});
