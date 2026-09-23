@@ -3,11 +3,16 @@
   "generated_at": "2026-09-11T00:00:00Z",
   "criteria": {
     "min_stars": 100,
-    "days_back": 7
+    "days_back": 7,
+    "fresh_days": 365
   },
   "filter": {
     "type": "keyword",
-    "keywords": ["ai", "llm", "agent"]
+    "keywords": [
+      "ai",
+      "llm",
+      "agent"
+    ]
   },
   "repositories": [
     {
@@ -17,7 +22,8 @@
       "description": "A fast email server",
       "stars": 12345,
       "language": "Rust",
-      "updated_at": "2026-09-10"
+      "updated_at": "2026-09-10",
+      "created_at": "2020-05-01"
     },
     {
       "rank": 2,
@@ -26,7 +32,8 @@
       "description": "Tools to maintain kernel modules | with pipes",
       "stars": 6789,
       "language": "C",
-      "updated_at": "2026-09-09"
+      "updated_at": "2026-09-09",
+      "created_at": "2015-01-15"
     },
     {
       "rank": 3,
@@ -35,7 +42,20 @@
       "description": "",
       "stars": 234,
       "language": "Unknown",
-      "updated_at": "2026-09-08"
+      "updated_at": "2026-09-08",
+      "created_at": "2024-11-30"
+    }
+  ],
+  "fresh_repositories": [
+    {
+      "rank": 1,
+      "full_name": "example/newcomer",
+      "url": "https://github.com/example/newcomer",
+      "description": "A brand-new terminal multiplexer",
+      "stars": 512,
+      "language": "Rust",
+      "updated_at": "2026-09-10",
+      "created_at": "2026-03-12"
     }
   ]
 }
