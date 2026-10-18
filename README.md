@@ -47,59 +47,59 @@ feeds the [New &amp; rising](#-new--rising) section.
 ## Trending non-AI repositories
 
 <!-- TRENDING:START -->
-*Last updated: **2026-10-17 09:33 UTC** — repos with >100 stars, active in the last 7 days, no AI keywords detected.*
+*Last updated: **2026-10-18 09:45 UTC** — repos with >100 stars, active in the last 7 days, no AI keywords detected.*
 
 | # | Change | Repository | ⭐ Stars | Language | Description |
 |--:|:------:|------------|--------:|----------|-------------|
-| 1 | — | [public-apis/public-apis](https://github.com/public-apis/public-apis) | 489,587 | Python | A collective list of free APIs |
-| 2 | — | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 457,242 | TypeScript | freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free. |
-| 3 | — | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 399,273 | Python | :books: Freely available programming books |
-| 4 | — | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 369,618 | TypeScript | Interactive roadmaps, guides and other educational content to help developers grow in their careers. |
-| 5 | — | [vinta/awesome-python](https://github.com/vinta/awesome-python) | 328,068 | Python | The definitive list that answers "I want to do X in Python, which tool should I use?" |
-| 6 | — | [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | 327,466 | Unknown | A list of Free Software network services and web applications which can be hosted on your own servers |
-| 7 | — | [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 286,979 | Python | Curated list of project-based tutorials |
-| 8 | — | [torvalds/linux](https://github.com/torvalds/linux) | 252,215 | C | Linux kernel source tree |
-| 9 | — | [react/react](https://github.com/react/react) | 251,189 | JavaScript | The library for web and native user interfaces. |
-| 10 | — | [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | 225,329 | Python | All Algorithms implemented in Python |
-| 11 | NEW | [massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) | 194,775 | Batchfile | Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshoo… |
-| 12 | — | [microsoft/vscode](https://github.com/microsoft/vscode) | 193,768 | TypeScript | Visual Studio Code |
-| 13 | — | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) | 190,050 | Shell | 🙃 A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (r… |
-| 14 | — | [avelino/awesome-go](https://github.com/avelino/awesome-go) | 188,820 | Go | A curated list of awesome Go frameworks, libraries and software |
-| 15 | — | [flutter/flutter](https://github.com/flutter/flutter) | 180,246 | Dart | Flutter makes it easy and fast to build beautiful apps for mobile and beyond |
-| 16 | — | [twbs/bootstrap](https://github.com/twbs/bootstrap) | 174,920 | MDX | The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. |
-| 17 | — | [Genymobile/scrcpy](https://github.com/Genymobile/scrcpy) | 152,357 | C | Display and control your Android device |
-| 18 | — | [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) | 151,977 | Rust | A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience |
-| 19 | — | [vercel/next.js](https://github.com/vercel/next.js) | 143,049 | JavaScript | The React Framework |
-| 20 | — | [iptv-org/iptv](https://github.com/iptv-org/iptv) | 141,149 | TypeScript | Collection of publicly available IPTV channels from all over the world |
-| 21 | — | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 139,682 | HTML | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev |
-| 22 | — | [microsoft/PowerToys](https://github.com/microsoft/PowerToys) | 139,411 | C | Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows |
-| 23 | — | [golang/go](https://github.com/golang/go) | 139,282 | Go | The Go programming language |
-| 24 | — | [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 134,024 | TypeScript | Virtual whiteboard for sketching hand-drawn like diagrams |
-| 25 | ↑ 1 | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 128,318 | Go | Production-Grade Container Scheduling and Management |
-| 26 | ↑ 1 | [react/react-native](https://github.com/react/react-native) | 126,695 | C++ | A framework for building native applications using React |
-| 27 | ↑ 1 | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 126,071 | Rust | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. |
-| 28 | ↑ 1 | [electron/electron](https://github.com/electron/electron) | 123,359 | C++ | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS |
-| 29 | ↑ 1 | [nodejs/node](https://github.com/nodejs/node) | 122,380 | JavaScript | Node.js JavaScript runtime ✨🐢🚀✨ |
-| 30 | ↑ 1 | [rust-lang/rust](https://github.com/rust-lang/rust) | 120,432 | Rust | Empowering everyone to build reliable and efficient software. |
-| 31 | ↑ 1 | [godotengine/godot](https://github.com/godotengine/godot) | 118,535 | C++ | Godot Engine – Multi-platform 2D and 3D game engine |
-| 32 | ↑ 1 | [2dust/v2rayN](https://github.com/2dust/v2rayN) | 118,418 | C# | A GUI client for Windows, Linux and macOS, support Xray and sing-box and others |
-| 33 | ↑ 1 | [mrdoob/three.js](https://github.com/mrdoob/three.js) | 116,526 | JavaScript | JavaScript 3D Library. |
-| 34 | ↑ 1 | [immich-app/immich](https://github.com/immich-app/immich) | 116,453 | TypeScript | High performance self-hosted photo and video management solution. |
-| 35 | ↑ 1 | [jaywcjlove/awesome-mac](https://github.com/jaywcjlove/awesome-mac) | 116,335 | Swift |  This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy s… |
-| 36 | ↑ 1 | [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | 111,958 | Rust | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. |
-| 37 | ↑ 1 | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | 111,506 | Go | TypeScript is a superset of JavaScript that compiles to clean JavaScript output. |
-| 38 | ↑ 1 | [fatedier/frp](https://github.com/fatedier/frp) | 109,958 | Go | A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. |
-| 39 | ↑ 1 | [axios/axios](https://github.com/axios/axios) | 109,301 | JavaScript | Promise based HTTP client for the browser and node.js |
-| 40 | ↑ 1 | [ruanyf/weekly](https://github.com/ruanyf/weekly) | 106,320 | Unknown | 科技爱好者周刊，每周五发布 |
-| 41 | ↑ 1 | [microsoft/terminal](https://github.com/microsoft/terminal) | 105,177 | C++ | The new Windows Terminal and the original Windows console host, all in the same place! |
-| 42 | ↑ 1 | [fastapi/fastapi](https://github.com/fastapi/fastapi) | 103,159 | Python | FastAPI framework, high performance, easy to learn, fast to code, ready for production |
-| 43 | ↑ 1 | [neovim/neovim](https://github.com/neovim/neovim) | 103,024 | Vim Script | Vim-fork focused on extensibility and usability |
-| 44 | ↑ 1 | [Anduin2017/HowToCook](https://github.com/Anduin2017/HowToCook) | 102,853 | Unknown | Programmer's guide about how to cook at home. |
-| 45 | ↑ 1 | [angular/angular](https://github.com/angular/angular) | 101,067 | TypeScript | Deliver web apps with confidence 🚀 |
-| 46 | ↑ 1 | [ant-design/ant-design](https://github.com/ant-design/ant-design) | 99,800 | TypeScript | An enterprise-class UI design language and React UI library |
-| 47 | ↑ 1 | [mui/material-ui](https://github.com/mui/material-ui) | 99,229 | JavaScript | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. |
-| 48 | ↑ 2 | [microsoft/playwright](https://github.com/microsoft/playwright) | 97,897 | TypeScript | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. |
-| 49 | — | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 97,892 | TypeScript | A utility-first CSS framework for rapid UI development. |
+| 1 | — | [public-apis/public-apis](https://github.com/public-apis/public-apis) | 489,898 | Python | A collective list of free APIs |
+| 2 | — | [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 457,374 | TypeScript | freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free. |
+| 3 | — | [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 399,401 | Python | :books: Freely available programming books |
+| 4 | — | [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 369,730 | TypeScript | Interactive roadmaps, guides and other educational content to help developers grow in their careers. |
+| 5 | — | [vinta/awesome-python](https://github.com/vinta/awesome-python) | 328,305 | Python | The definitive list that answers "I want to do X in Python, which tool should I use?" |
+| 6 | — | [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | 327,824 | Unknown | A list of Free Software network services and web applications which can be hosted on your own servers |
+| 7 | — | [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 287,104 | Python | Curated list of project-based tutorials |
+| 8 | — | [torvalds/linux](https://github.com/torvalds/linux) | 252,334 | C | Linux kernel source tree |
+| 9 | — | [react/react](https://github.com/react/react) | 251,241 | JavaScript | The library for web and native user interfaces. |
+| 10 | — | [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | 225,366 | Python | All Algorithms implemented in Python |
+| 11 | — | [massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) | 194,891 | Batchfile | Open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshoo… |
+| 12 | — | [microsoft/vscode](https://github.com/microsoft/vscode) | 193,798 | TypeScript | Visual Studio Code |
+| 13 | — | [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) | 190,065 | Shell | 🙃 A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (r… |
+| 14 | — | [avelino/awesome-go](https://github.com/avelino/awesome-go) | 189,006 | Go | A curated list of awesome Go frameworks, libraries and software |
+| 15 | — | [flutter/flutter](https://github.com/flutter/flutter) | 180,261 | Dart | Flutter makes it easy and fast to build beautiful apps for mobile and beyond |
+| 16 | — | [twbs/bootstrap](https://github.com/twbs/bootstrap) | 174,926 | MDX | The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. |
+| 17 | — | [Genymobile/scrcpy](https://github.com/Genymobile/scrcpy) | 152,410 | C | Display and control your Android device |
+| 18 | — | [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) | 152,168 | Rust | A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience |
+| 19 | — | [vercel/next.js](https://github.com/vercel/next.js) | 143,062 | JavaScript | The React Framework |
+| 20 | — | [iptv-org/iptv](https://github.com/iptv-org/iptv) | 141,250 | TypeScript | Collection of publicly available IPTV channels from all over the world |
+| 21 | — | [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev) | 139,737 | HTML | A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev |
+| 22 | — | [microsoft/PowerToys](https://github.com/microsoft/PowerToys) | 139,443 | C | Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows |
+| 23 | — | [golang/go](https://github.com/golang/go) | 139,296 | Go | The Go programming language |
+| 24 | — | [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 134,086 | TypeScript | Virtual whiteboard for sketching hand-drawn like diagrams |
+| 25 | — | [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 128,334 | Go | Production-Grade Container Scheduling and Management |
+| 26 | — | [react/react-native](https://github.com/react/react-native) | 126,699 | C++ | A framework for building native applications using React |
+| 27 | — | [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 126,183 | Rust | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. |
+| 28 | — | [electron/electron](https://github.com/electron/electron) | 123,379 | C++ | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS |
+| 29 | — | [nodejs/node](https://github.com/nodejs/node) | 122,402 | JavaScript | Node.js JavaScript runtime ✨🐢🚀✨ |
+| 30 | — | [rust-lang/rust](https://github.com/rust-lang/rust) | 120,472 | Rust | Empowering everyone to build reliable and efficient software. |
+| 31 | — | [godotengine/godot](https://github.com/godotengine/godot) | 118,594 | C++ | Godot Engine – Multi-platform 2D and 3D game engine |
+| 32 | — | [2dust/v2rayN](https://github.com/2dust/v2rayN) | 118,505 | C# | A GUI client for Windows, Linux and macOS, support Xray and sing-box and others |
+| 33 | — | [mrdoob/three.js](https://github.com/mrdoob/three.js) | 116,573 | JavaScript | JavaScript 3D Library. |
+| 34 | — | [immich-app/immich](https://github.com/immich-app/immich) | 116,528 | TypeScript | High performance self-hosted photo and video management solution. |
+| 35 | — | [jaywcjlove/awesome-mac](https://github.com/jaywcjlove/awesome-mac) | 116,406 | Swift |  This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy s… |
+| 36 | — | [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | 111,978 | Rust | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. |
+| 37 | — | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | 111,521 | Go | TypeScript is a superset of JavaScript that compiles to clean JavaScript output. |
+| 38 | — | [fatedier/frp](https://github.com/fatedier/frp) | 109,973 | Go | A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. |
+| 39 | — | [axios/axios](https://github.com/axios/axios) | 109,299 | JavaScript | Promise based HTTP client for the browser and node.js |
+| 40 | — | [ruanyf/weekly](https://github.com/ruanyf/weekly) | 106,390 | Unknown | 科技爱好者周刊，每周五发布 |
+| 41 | — | [microsoft/terminal](https://github.com/microsoft/terminal) | 105,178 | C++ | The new Windows Terminal and the original Windows console host, all in the same place! |
+| 42 | — | [fastapi/fastapi](https://github.com/fastapi/fastapi) | 103,186 | Python | FastAPI framework, high performance, easy to learn, fast to code, ready for production |
+| 43 | — | [neovim/neovim](https://github.com/neovim/neovim) | 103,045 | Vim Script | Vim-fork focused on extensibility and usability |
+| 44 | — | [Anduin2017/HowToCook](https://github.com/Anduin2017/HowToCook) | 102,868 | Unknown | Programmer's guide about how to cook at home. |
+| 45 | — | [angular/angular](https://github.com/angular/angular) | 101,088 | TypeScript | Deliver web apps with confidence 🚀 |
+| 46 | — | [ant-design/ant-design](https://github.com/ant-design/ant-design) | 99,806 | TypeScript | An enterprise-class UI design language and React UI library |
+| 47 | — | [mui/material-ui](https://github.com/mui/material-ui) | 99,239 | JavaScript | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. |
+| 48 | — | [microsoft/playwright](https://github.com/microsoft/playwright) | 97,971 | TypeScript | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. |
+| 49 | — | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 97,908 | TypeScript | A utility-first CSS framework for rapid UI development. |
 
 *Change = positions moved in this list since the previous update; NEW = not in the previous update.*
 <!-- TRENDING:END -->
@@ -112,21 +112,21 @@ the long-established giants.
 <!-- FRESH:START -->
 | # | Repository | ⭐ Stars | Language | Created | Description |
 |--:|------------|--------:|----------|---------|-------------|
-| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | 65,454 | Rust | 2026-09-30 | PhotoCraft: An open-source, photo editor written by scratch in pure Rust |
-| 2 | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | 64,783 | HTML | 2026-09-07 | 高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。 |
-| 3 | [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | 57,396 | JavaScript | 2026-06-22 | A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe. |
-| 4 | [chenglou/pretext](https://github.com/chenglou/pretext) | 50,817 | TypeScript | 2026-03-07 | Fast, accurate & comprehensive text measurement & layout |
-| 5 | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) | 48,833 | Python | 2026-04-24 | 符合nature论文学术表达和科研绘图的Skill |
-| 6 | [emilkowalski/skills](https://github.com/emilkowalski/skills) | 46,802 | Markdown | 2026-03-16 | Skills for Designers and Engineers. |
-| 7 | [JustVugg/colibri](https://github.com/JustVugg/colibri) | 42,472 | C | 2026-07-01 | Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦 |
-| 8 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 40,235 | C++ | 2026-08-03 | Tool for automatic PS5 executables porting to Linux and Windows |
-| 9 | [block/buzz](https://github.com/block/buzz) | 36,084 | Rust | 2026-03-06 | A hive mind communication platform |
-| 10 | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill) | 34,767 | Python | 2026-04-05 | 你想蒸馏的下一个员工，何必是同事。蒸馏任何人的思维方式——心智模型、决策启发式、表达DNA。Distill how anyone thinks. |
-| 11 | [webadderallorg/Recordly](https://github.com/webadderallorg/Recordly) | 34,116 | TypeScript | 2026-03-12 | Create polished demo videos without editing skills. Mac/Windows/Linux |
-| 12 | [xai-org/x-algorithm](https://github.com/xai-org/x-algorithm) | 33,667 | Rust | 2026-01-19 | Algorithm powering the For You feed on X |
-| 13 | [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | 33,210 | Python | 2026-09-18 | Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ langu… |
-| 14 | [lbjlaq/Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 32,305 | Rust | 2025-11-26 | Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + Reac… |
-| 15 | [BigPizzaV3/CodexPlusPlus](https://github.com/BigPizzaV3/CodexPlusPlus) | 32,273 | Rust | 2026-05-06 | An enhanced tool for CodexApp, striving to make Codex better to use and more comfortable 一个CodexApp的增强工具，努力让Codex变得更好用更舒服 |
+| 1 | [storytold/photocraft](https://github.com/storytold/photocraft) | 66,793 | Rust | 2026-09-30 | PhotoCraft: An open-source, photo editor written by scratch in pure Rust |
+| 2 | [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) | 65,470 | HTML | 2026-09-07 | 高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。 |
+| 3 | [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | 57,759 | JavaScript | 2026-06-22 | A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe. |
+| 4 | [chenglou/pretext](https://github.com/chenglou/pretext) | 50,825 | TypeScript | 2026-03-07 | Fast, accurate & comprehensive text measurement & layout |
+| 5 | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) | 49,003 | Python | 2026-04-24 | 符合nature论文学术表达和科研绘图的Skill |
+| 6 | [JustVugg/colibri](https://github.com/JustVugg/colibri) | 42,661 | C | 2026-07-01 | Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦 |
+| 7 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 42,306 | C++ | 2026-08-03 | Tool for automatic PS5 executables porting to Linux and Windows |
+| 8 | [block/buzz](https://github.com/block/buzz) | 36,115 | Rust | 2026-03-06 | A hive mind communication platform |
+| 9 | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill) | 34,875 | Python | 2026-04-05 | 你想蒸馏的下一个员工，何必是同事。蒸馏任何人的思维方式——心智模型、决策启发式、表达DNA。Distill how anyone thinks. |
+| 10 | [webadderallorg/Recordly](https://github.com/webadderallorg/Recordly) | 34,292 | TypeScript | 2026-03-12 | Create polished demo videos without editing skills. Mac/Windows/Linux |
+| 11 | [xai-org/x-algorithm](https://github.com/xai-org/x-algorithm) | 33,674 | Rust | 2026-01-19 | Algorithm powering the For You feed on X |
+| 12 | [NandhaKishorM/laya](https://github.com/NandhaKishorM/laya) | 33,300 | Python | 2026-09-18 | Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ langu… |
+| 13 | [lbjlaq/Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | 32,329 | Rust | 2025-11-26 | Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + Reac… |
+| 14 | [BigPizzaV3/CodexPlusPlus](https://github.com/BigPizzaV3/CodexPlusPlus) | 32,316 | Rust | 2026-05-06 | An enhanced tool for CodexApp, striving to make Codex better to use and more comfortable 一个CodexApp的增强工具，努力让Codex变得更好用更舒服 |
+| 15 | [tobi/qmd](https://github.com/tobi/qmd) | 30,467 | TypeScript | 2025-12-08 | mini cli search engine for your docs, knowledge bases, meeting notes, whatever. Tracking current sota approaches while being all local |
 <!-- FRESH:END -->
 
 ## Trending by language
@@ -136,66 +136,66 @@ the long-established giants.
 
 | Repository | ⭐ Stars | Description |
 |------------|--------:|-------------|
-| [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 457,242 | freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free. |
-| [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 369,618 | Interactive roadmaps, guides and other educational content to help developers grow in their careers. |
-| [microsoft/vscode](https://github.com/microsoft/vscode) | 193,768 | Visual Studio Code |
-| [iptv-org/iptv](https://github.com/iptv-org/iptv) | 141,149 | Collection of publicly available IPTV channels from all over the world |
-| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 134,024 | Virtual whiteboard for sketching hand-drawn like diagrams |
-| [immich-app/immich](https://github.com/immich-app/immich) | 116,453 | High performance self-hosted photo and video management solution. |
-| [angular/angular](https://github.com/angular/angular) | 101,067 | Deliver web apps with confidence 🚀 |
-| [ant-design/ant-design](https://github.com/ant-design/ant-design) | 99,800 | An enterprise-class UI design language and React UI library |
-| [microsoft/playwright](https://github.com/microsoft/playwright) | 97,897 | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. |
-| [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 97,892 | A utility-first CSS framework for rapid UI development. |
+| [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 457,374 | freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free. |
+| [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap) | 369,730 | Interactive roadmaps, guides and other educational content to help developers grow in their careers. |
+| [microsoft/vscode](https://github.com/microsoft/vscode) | 193,798 | Visual Studio Code |
+| [iptv-org/iptv](https://github.com/iptv-org/iptv) | 141,250 | Collection of publicly available IPTV channels from all over the world |
+| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 134,086 | Virtual whiteboard for sketching hand-drawn like diagrams |
+| [immich-app/immich](https://github.com/immich-app/immich) | 116,528 | High performance self-hosted photo and video management solution. |
+| [angular/angular](https://github.com/angular/angular) | 101,088 | Deliver web apps with confidence 🚀 |
+| [ant-design/ant-design](https://github.com/ant-design/ant-design) | 99,806 | An enterprise-class UI design language and React UI library |
+| [microsoft/playwright](https://github.com/microsoft/playwright) | 97,971 | Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. |
+| [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) | 97,908 | A utility-first CSS framework for rapid UI development. |
 
 ### JavaScript
 
 | Repository | ⭐ Stars | Description |
 |------------|--------:|-------------|
-| [react/react](https://github.com/react/react) | 251,189 | The library for web and native user interfaces. |
-| [vercel/next.js](https://github.com/vercel/next.js) | 143,049 | The React Framework |
-| [nodejs/node](https://github.com/nodejs/node) | 122,380 | Node.js JavaScript runtime ✨🐢🚀✨ |
-| [mrdoob/three.js](https://github.com/mrdoob/three.js) | 116,526 | JavaScript 3D Library. |
-| [axios/axios](https://github.com/axios/axios) | 109,301 | Promise based HTTP client for the browser and node.js |
-| [mui/material-ui](https://github.com/mui/material-ui) | 99,229 | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. |
+| [react/react](https://github.com/react/react) | 251,241 | The library for web and native user interfaces. |
+| [vercel/next.js](https://github.com/vercel/next.js) | 143,062 | The React Framework |
+| [nodejs/node](https://github.com/nodejs/node) | 122,402 | Node.js JavaScript runtime ✨🐢🚀✨ |
+| [mrdoob/three.js](https://github.com/mrdoob/three.js) | 116,573 | JavaScript 3D Library. |
+| [axios/axios](https://github.com/axios/axios) | 109,299 | Promise based HTTP client for the browser and node.js |
+| [mui/material-ui](https://github.com/mui/material-ui) | 99,239 | Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. |
 
 ### Python
 
 | Repository | ⭐ Stars | Description |
 |------------|--------:|-------------|
-| [public-apis/public-apis](https://github.com/public-apis/public-apis) | 489,587 | A collective list of free APIs |
-| [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 399,273 | :books: Freely available programming books |
-| [vinta/awesome-python](https://github.com/vinta/awesome-python) | 328,068 | The definitive list that answers "I want to do X in Python, which tool should I use?" |
-| [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 286,979 | Curated list of project-based tutorials |
-| [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | 225,329 | All Algorithms implemented in Python |
-| [fastapi/fastapi](https://github.com/fastapi/fastapi) | 103,159 | FastAPI framework, high performance, easy to learn, fast to code, ready for production |
+| [public-apis/public-apis](https://github.com/public-apis/public-apis) | 489,898 | A collective list of free APIs |
+| [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | 399,401 | :books: Freely available programming books |
+| [vinta/awesome-python](https://github.com/vinta/awesome-python) | 328,305 | The definitive list that answers "I want to do X in Python, which tool should I use?" |
+| [practical-tutorials/project-based-learning](https://github.com/practical-tutorials/project-based-learning) | 287,104 | Curated list of project-based tutorials |
+| [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python) | 225,366 | All Algorithms implemented in Python |
+| [fastapi/fastapi](https://github.com/fastapi/fastapi) | 103,186 | FastAPI framework, high performance, easy to learn, fast to code, ready for production |
 
 ### Go
 
 | Repository | ⭐ Stars | Description |
 |------------|--------:|-------------|
-| [avelino/awesome-go](https://github.com/avelino/awesome-go) | 188,820 | A curated list of awesome Go frameworks, libraries and software |
-| [golang/go](https://github.com/golang/go) | 139,282 | The Go programming language |
-| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 128,318 | Production-Grade Container Scheduling and Management |
-| [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | 111,506 | TypeScript is a superset of JavaScript that compiles to clean JavaScript output. |
-| [fatedier/frp](https://github.com/fatedier/frp) | 109,958 | A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. |
+| [avelino/awesome-go](https://github.com/avelino/awesome-go) | 189,006 | A curated list of awesome Go frameworks, libraries and software |
+| [golang/go](https://github.com/golang/go) | 139,296 | The Go programming language |
+| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes) | 128,334 | Production-Grade Container Scheduling and Management |
+| [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | 111,521 | TypeScript is a superset of JavaScript that compiles to clean JavaScript output. |
+| [fatedier/frp](https://github.com/fatedier/frp) | 109,973 | A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet. |
 
 ### C++
 
 | Repository | ⭐ Stars | Description |
 |------------|--------:|-------------|
-| [react/react-native](https://github.com/react/react-native) | 126,695 | A framework for building native applications using React |
-| [electron/electron](https://github.com/electron/electron) | 123,359 | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS |
-| [godotengine/godot](https://github.com/godotengine/godot) | 118,535 | Godot Engine – Multi-platform 2D and 3D game engine |
-| [microsoft/terminal](https://github.com/microsoft/terminal) | 105,177 | The new Windows Terminal and the original Windows console host, all in the same place! |
+| [react/react-native](https://github.com/react/react-native) | 126,699 | A framework for building native applications using React |
+| [electron/electron](https://github.com/electron/electron) | 123,379 | :electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS |
+| [godotengine/godot](https://github.com/godotengine/godot) | 118,594 | Godot Engine – Multi-platform 2D and 3D game engine |
+| [microsoft/terminal](https://github.com/microsoft/terminal) | 105,178 | The new Windows Terminal and the original Windows console host, all in the same place! |
 
 ### Rust
 
 | Repository | ⭐ Stars | Description |
 |------------|--------:|-------------|
-| [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) | 151,977 | A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience |
-| [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 126,071 | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. |
-| [rust-lang/rust](https://github.com/rust-lang/rust) | 120,432 | Empowering everyone to build reliable and efficient software. |
-| [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | 111,958 | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. |
+| [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) | 152,168 | A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience |
+| [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk) | 126,183 | An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer. |
+| [rust-lang/rust](https://github.com/rust-lang/rust) | 120,472 | Empowering everyone to build reliable and efficient software. |
+| [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | 111,978 | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. |
 <!-- BY_LANGUAGE:END -->
 
 ## 🔍 How the filter works
