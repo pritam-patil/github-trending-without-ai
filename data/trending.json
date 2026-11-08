@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-07T11:50:54Z",
+  "generated_at": "2026-11-08T12:03:36Z",
   "criteria": {
     "min_stars": 100,
     "days_back": 7,
@@ -46,9 +46,9 @@
       "full_name": "public-apis/public-apis",
       "url": "https://github.com/public-apis/public-apis",
       "description": "A collective list of free APIs",
-      "stars": 496860,
+      "stars": 497161,
       "language": "Python",
-      "updated_at": "2026-11-05",
+      "updated_at": "2026-11-07",
       "created_at": "2016-03-20",
       "previous_rank": 1
     },
@@ -57,7 +57,7 @@
       "full_name": "freeCodeCamp/freeCodeCamp",
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
-      "stars": 458694,
+      "stars": 458742,
       "language": "TypeScript",
       "updated_at": "2026-11-06",
       "created_at": "2014-12-24",
@@ -68,9 +68,9 @@
       "full_name": "EbookFoundation/free-programming-books",
       "url": "https://github.com/EbookFoundation/free-programming-books",
       "description": ":books: Freely available programming books",
-      "stars": 401182,
+      "stars": 401262,
       "language": "Python",
-      "updated_at": "2026-11-01",
+      "updated_at": "2026-11-07",
       "created_at": "2013-10-11",
       "previous_rank": 3
     },
@@ -79,7 +79,7 @@
       "full_name": "nilbuild/developer-roadmap",
       "url": "https://github.com/nilbuild/developer-roadmap",
       "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
-      "stars": 371450,
+      "stars": 371527,
       "language": "TypeScript",
       "updated_at": "2026-11-06",
       "created_at": "2017-03-15",
@@ -90,7 +90,7 @@
       "full_name": "jwasham/coding-interview-university",
       "url": "https://github.com/jwasham/coding-interview-university",
       "description": "A complete computer science study plan to become a software engineer.",
-      "stars": 364061,
+      "stars": 364086,
       "language": "Unknown",
       "updated_at": "2026-11-07",
       "created_at": "2016-06-06",
@@ -101,7 +101,7 @@
       "full_name": "awesome-selfhosted/awesome-selfhosted",
       "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
       "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
-      "stars": 334676,
+      "stars": 334986,
       "language": "Unknown",
       "updated_at": "2026-11-07",
       "created_at": "2015-06-01",
@@ -112,7 +112,7 @@
       "full_name": "vinta/awesome-python",
       "url": "https://github.com/vinta/awesome-python",
       "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
-      "stars": 333114,
+      "stars": 333319,
       "language": "Python",
       "updated_at": "2026-11-06",
       "created_at": "2014-06-27",
@@ -123,7 +123,7 @@
       "full_name": "practical-tutorials/project-based-learning",
       "url": "https://github.com/practical-tutorials/project-based-learning",
       "description": "Curated list of project-based tutorials",
-      "stars": 289259,
+      "stars": 289323,
       "language": "Python",
       "updated_at": "2026-11-02",
       "created_at": "2017-04-12",
@@ -134,9 +134,9 @@
       "full_name": "torvalds/linux",
       "url": "https://github.com/torvalds/linux",
       "description": "Linux kernel source tree",
-      "stars": 254722,
+      "stars": 254838,
       "language": "C",
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "created_at": "2011-09-04",
       "previous_rank": 9
     },
@@ -145,7 +145,7 @@
       "full_name": "react/react",
       "url": "https://github.com/react/react",
       "description": "The library for web and native user interfaces.",
-      "stars": 252345,
+      "stars": 252404,
       "language": "JavaScript",
       "updated_at": "2026-11-07",
       "created_at": "2013-05-24",
@@ -156,7 +156,7 @@
       "full_name": "TheAlgorithms/Python",
       "url": "https://github.com/TheAlgorithms/Python",
       "description": "All Algorithms implemented in Python",
-      "stars": 225935,
+      "stars": 225956,
       "language": "Python",
       "updated_at": "2026-11-02",
       "created_at": "2016-07-16",
@@ -167,62 +167,62 @@
       "full_name": "ossu/computer-science",
       "url": "https://github.com/ossu/computer-science",
       "description": "🎓 Path to a free self-taught education in Computer Science!",
-      "stars": 210918,
+      "stars": 210960,
       "language": "HTML",
       "updated_at": "2026-11-07",
       "created_at": "2014-05-04",
-      "previous_rank": null
+      "previous_rank": 12
     },
     {
       "rank": 13,
       "full_name": "yt-dlp/yt-dlp",
       "url": "https://github.com/yt-dlp/yt-dlp",
       "description": "A feature-rich command-line audio/video downloader",
-      "stars": 205892,
+      "stars": 206115,
       "language": "Python",
       "updated_at": "2026-11-04",
       "created_at": "2020-10-26",
-      "previous_rank": 12
+      "previous_rank": 13
     },
     {
       "rank": 14,
       "full_name": "microsoft/vscode",
       "url": "https://github.com/microsoft/vscode",
       "description": "Visual Studio Code",
-      "stars": 195126,
+      "stars": 195178,
       "language": "TypeScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2015-09-03",
-      "previous_rank": 13
+      "previous_rank": 14
     },
     {
       "rank": 15,
       "full_name": "avelino/awesome-go",
       "url": "https://github.com/avelino/awesome-go",
       "description": "A curated list of awesome Go frameworks, libraries and software",
-      "stars": 192532,
+      "stars": 192717,
       "language": "Go",
       "updated_at": "2026-11-06",
       "created_at": "2014-07-06",
-      "previous_rank": 14
+      "previous_rank": 15
     },
     {
       "rank": 16,
       "full_name": "ohmyzsh/ohmyzsh",
       "url": "https://github.com/ohmyzsh/ohmyzsh",
       "description": "🙃   A delightful community-driven (with 2,500+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, macOS, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool that makes it easy to keep up with the latest updates from the community.",
-      "stars": 190343,
+      "stars": 190365,
       "language": "Shell",
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-07",
       "created_at": "2009-08-28",
-      "previous_rank": 15
+      "previous_rank": 16
     },
     {
       "rank": 17,
       "full_name": "CyC2018/CS-Notes",
       "url": "https://github.com/CyC2018/CS-Notes",
       "description": ":books: 技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计",
-      "stars": 186458,
+      "stars": 186466,
       "language": "JavaScript",
       "updated_at": "2026-11-07",
       "created_at": "2018-02-13",
@@ -233,341 +233,352 @@
       "full_name": "flutter/flutter",
       "url": "https://github.com/flutter/flutter",
       "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
-      "stars": 181084,
+      "stars": 181091,
       "language": "Dart",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2015-03-06",
-      "previous_rank": 19
+      "previous_rank": 18
     },
     {
       "rank": 19,
       "full_name": "github/gitignore",
       "url": "https://github.com/github/gitignore",
       "description": "A collection of useful .gitignore templates",
-      "stars": 176186,
+      "stars": 176196,
       "language": "Unknown",
       "updated_at": "2026-11-07",
       "created_at": "2010-11-08",
-      "previous_rank": 20
+      "previous_rank": 19
     },
     {
       "rank": 20,
       "full_name": "twbs/bootstrap",
       "url": "https://github.com/twbs/bootstrap",
       "description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
-      "stars": 175019,
+      "stars": 175016,
       "language": "MDX",
       "updated_at": "2026-11-07",
       "created_at": "2011-07-29",
-      "previous_rank": 21
+      "previous_rank": 20
     },
     {
       "rank": 21,
       "full_name": "clash-verge-rev/clash-verge-rev",
       "url": "https://github.com/clash-verge-rev/clash-verge-rev",
       "description": "A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience",
-      "stars": 156889,
+      "stars": 157072,
       "language": "Rust",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2023-11-21",
-      "previous_rank": 22
+      "previous_rank": 21
     },
     {
       "rank": 22,
       "full_name": "Genymobile/scrcpy",
       "url": "https://github.com/Genymobile/scrcpy",
       "description": "Display and control your Android device",
-      "stars": 154219,
+      "stars": 154299,
       "language": "C",
       "updated_at": "2026-11-06",
       "created_at": "2017-11-21",
-      "previous_rank": 23
+      "previous_rank": 22
     },
     {
       "rank": 23,
       "full_name": "iptv-org/iptv",
       "url": "https://github.com/iptv-org/iptv",
       "description": "Collection of publicly available IPTV channels from all over the world",
-      "stars": 143472,
+      "stars": 143551,
       "language": "TypeScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2018-11-14",
-      "previous_rank": 24
+      "previous_rank": 23
     },
     {
       "rank": 24,
       "full_name": "vercel/next.js",
       "url": "https://github.com/vercel/next.js",
       "description": "The React Framework",
-      "stars": 143379,
+      "stars": 143418,
       "language": "JavaScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2016-10-05",
-      "previous_rank": 25
+      "previous_rank": 24
     },
     {
       "rank": 25,
       "full_name": "ripienaar/free-for-dev",
       "url": "https://github.com/ripienaar/free-for-dev",
       "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
-      "stars": 142142,
+      "stars": 142232,
       "language": "HTML",
       "updated_at": "2026-11-07",
       "created_at": "2015-03-18",
-      "previous_rank": 26
+      "previous_rank": 25
     },
     {
       "rank": 26,
       "full_name": "ytdl-org/youtube-dl",
       "url": "https://github.com/ytdl-org/youtube-dl",
       "description": "Command-line program to download videos from YouTube.com and other video sites",
-      "stars": 141475,
+      "stars": 141488,
       "language": "Python",
       "updated_at": "2026-11-06",
       "created_at": "2010-10-31",
-      "previous_rank": 27
+      "previous_rank": 26
     },
     {
       "rank": 27,
       "full_name": "microsoft/PowerToys",
       "url": "https://github.com/microsoft/PowerToys",
       "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
-      "stars": 140680,
+      "stars": 140714,
       "language": "C",
       "updated_at": "2026-11-07",
       "created_at": "2019-05-01",
-      "previous_rank": 28
+      "previous_rank": 27
     },
     {
       "rank": 28,
       "full_name": "golang/go",
       "url": "https://github.com/golang/go",
       "description": "The Go programming language",
-      "stars": 139768,
+      "stars": 139783,
       "language": "Go",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2014-08-19",
-      "previous_rank": 29
+      "previous_rank": 28
     },
     {
       "rank": 29,
       "full_name": "excalidraw/excalidraw",
       "url": "https://github.com/excalidraw/excalidraw",
       "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
-      "stars": 135270,
+      "stars": 135320,
       "language": "TypeScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2020-01-02",
-      "previous_rank": 30
+      "previous_rank": 29
     },
     {
       "rank": 30,
       "full_name": "krahets/hello-algo",
       "url": "https://github.com/krahets/hello-algo",
       "description": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
-      "stars": 131998,
+      "stars": 132011,
       "language": "Python",
       "updated_at": "2026-11-07",
       "created_at": "2022-11-04",
-      "previous_rank": 31
+      "previous_rank": 30
     },
     {
       "rank": 31,
       "full_name": "kubernetes/kubernetes",
       "url": "https://github.com/kubernetes/kubernetes",
       "description": "Production-Grade Container Scheduling and Management",
-      "stars": 128881,
+      "stars": 128918,
       "language": "Go",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2014-06-06",
-      "previous_rank": 32
+      "previous_rank": 31
     },
     {
       "rank": 32,
       "full_name": "rustdesk/rustdesk",
       "url": "https://github.com/rustdesk/rustdesk",
       "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
-      "stars": 128513,
+      "stars": 128625,
       "language": "Rust",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2020-09-28",
-      "previous_rank": 33
+      "previous_rank": 32
     },
     {
       "rank": 33,
       "full_name": "react/react-native",
       "url": "https://github.com/react/react-native",
       "description": "A framework for building native applications using React",
-      "stars": 126873,
+      "stars": 126876,
       "language": "C++",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2015-01-09",
-      "previous_rank": 34
+      "previous_rank": 33
     },
     {
       "rank": 34,
       "full_name": "electron/electron",
       "url": "https://github.com/electron/electron",
       "description": ":electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS",
-      "stars": 123816,
+      "stars": 123825,
       "language": "C++",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2013-04-12",
-      "previous_rank": 35
+      "previous_rank": 34
     },
     {
       "rank": 35,
       "full_name": "nodejs/node",
       "url": "https://github.com/nodejs/node",
       "description": "Node.js JavaScript runtime ✨🐢🚀✨",
-      "stars": 123393,
+      "stars": 123412,
       "language": "JavaScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2014-11-26",
-      "previous_rank": 36
+      "previous_rank": 35
     },
     {
       "rank": 36,
       "full_name": "rust-lang/rust",
       "url": "https://github.com/rust-lang/rust",
       "description": "Empowering everyone to build reliable and efficient software.",
-      "stars": 121576,
+      "stars": 121619,
       "language": "Rust",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2010-06-16",
-      "previous_rank": 37
+      "previous_rank": 36
     },
     {
       "rank": 37,
       "full_name": "2dust/v2rayN",
       "url": "https://github.com/2dust/v2rayN",
       "description": "A GUI client for Windows, Linux and macOS, support Xray and sing-box and others",
-      "stars": 120133,
+      "stars": 120185,
       "language": "C#",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2019-07-30",
-      "previous_rank": 38
+      "previous_rank": 37
     },
     {
       "rank": 38,
       "full_name": "godotengine/godot",
       "url": "https://github.com/godotengine/godot",
       "description": "Godot Engine – Multi-platform 2D and 3D game engine",
-      "stars": 119716,
+      "stars": 119777,
       "language": "C++",
       "updated_at": "2026-11-07",
       "created_at": "2014-01-04",
-      "previous_rank": 39
+      "previous_rank": 38
     },
     {
       "rank": 39,
       "full_name": "immich-app/immich",
       "url": "https://github.com/immich-app/immich",
       "description": "High performance self-hosted photo and video management solution.",
-      "stars": 118441,
+      "stars": 118508,
       "language": "TypeScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2022-02-03",
-      "previous_rank": 40
+      "previous_rank": 39
     },
     {
       "rank": 40,
       "full_name": "jaywcjlove/awesome-mac",
       "url": "https://github.com/jaywcjlove/awesome-mac",
       "description": " This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy search and use.",
-      "stars": 117888,
+      "stars": 117971,
       "language": "Swift",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2016-07-17",
-      "previous_rank": 41
+      "previous_rank": 40
     },
     {
       "rank": 41,
       "full_name": "mrdoob/three.js",
       "url": "https://github.com/mrdoob/three.js",
       "description": "JavaScript 3D Library.",
-      "stars": 117775,
+      "stars": 117859,
       "language": "JavaScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2010-03-23",
-      "previous_rank": 42
+      "previous_rank": 41
     },
     {
       "rank": 42,
       "full_name": "d3/d3",
       "url": "https://github.com/d3/d3",
       "description": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
-      "stars": 113877,
+      "stars": 113881,
       "language": "Shell",
       "updated_at": "2026-11-03",
       "created_at": "2010-09-27",
-      "previous_rank": 43
+      "previous_rank": 42
     },
     {
       "rank": 43,
       "full_name": "tauri-apps/tauri",
       "url": "https://github.com/tauri-apps/tauri",
       "description": "Build smaller, faster, and more secure desktop and mobile applications with a web frontend.",
-      "stars": 112580,
+      "stars": 112612,
       "language": "Rust",
       "updated_at": "2026-11-06",
       "created_at": "2019-07-13",
-      "previous_rank": 44
+      "previous_rank": 43
     },
     {
       "rank": 44,
       "full_name": "microsoft/TypeScript",
       "url": "https://github.com/microsoft/TypeScript",
       "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
-      "stars": 111856,
+      "stars": 111862,
       "language": "Go",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2014-06-17",
-      "previous_rank": 45
+      "previous_rank": 44
     },
     {
       "rank": 45,
       "full_name": "fatedier/frp",
       "url": "https://github.com/fatedier/frp",
       "description": "A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.",
-      "stars": 110468,
+      "stars": 110472,
       "language": "Go",
       "updated_at": "2026-11-05",
       "created_at": "2015-12-21",
-      "previous_rank": 46
+      "previous_rank": 45
     },
     {
       "rank": 46,
       "full_name": "axios/axios",
       "url": "https://github.com/axios/axios",
       "description": "Promise based HTTP client for the browser and node.js",
-      "stars": 109310,
+      "stars": 109302,
       "language": "JavaScript",
       "updated_at": "2026-11-06",
       "created_at": "2014-08-18",
-      "previous_rank": 47
+      "previous_rank": 46
     },
     {
       "rank": 47,
       "full_name": "ruanyf/weekly",
       "url": "https://github.com/ruanyf/weekly",
       "description": "科技爱好者周刊，每周五发布",
-      "stars": 107768,
+      "stars": 107799,
       "language": "Unknown",
       "updated_at": "2026-11-05",
       "created_at": "2018-10-13",
-      "previous_rank": 48
+      "previous_rank": 47
     },
     {
       "rank": 48,
       "full_name": "microsoft/terminal",
       "url": "https://github.com/microsoft/terminal",
       "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
-      "stars": 105337,
+      "stars": 105348,
       "language": "C++",
       "updated_at": "2026-11-07",
       "created_at": "2017-08-11",
-      "previous_rank": 49
+      "previous_rank": 48
+    },
+    {
+      "rank": 49,
+      "full_name": "fastapi/fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "stars": 104565,
+      "language": "Python",
+      "updated_at": "2026-11-07",
+      "created_at": "2018-12-08",
+      "previous_rank": null
     }
   ],
   "fresh_repositories": [
@@ -576,9 +587,9 @@
       "full_name": "storytold/photocraft",
       "url": "https://github.com/storytold/photocraft",
       "description": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
-      "stars": 77594,
+      "stars": 77863,
       "language": "Rust",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-09-30"
     },
     {
@@ -586,7 +597,7 @@
       "full_name": "eternity4719/HowToLiveBetter",
       "url": "https://github.com/eternity4719/HowToLiveBetter",
       "description": "高性价比人生指南: 长寿防病、急救、省钱理财、法律红线、失业与工伤、医保社保、恋爱婚育、怀孕育儿、创业与做平台合规、出国与技能。每条写明成本、收益、证据等级和原始出处，只引期刊论文与官方文件。",
-      "stars": 74132,
+      "stars": 74309,
       "language": "HTML",
       "updated_at": "2026-11-06",
       "created_at": "2026-09-07"
@@ -596,9 +607,9 @@
       "full_name": "bilawalsidhu/gods-eye-view",
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "stars": 63302,
+      "stars": 63487,
       "language": "JavaScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-06-22"
     },
     {
@@ -606,7 +617,7 @@
       "full_name": "emilkowalski/skills",
       "url": "https://github.com/emilkowalski/skills",
       "description": "Skills for Designers and Engineers.",
-      "stars": 54247,
+      "stars": 54497,
       "language": "Markdown",
       "updated_at": "2026-11-04",
       "created_at": "2026-03-16"
@@ -616,7 +627,7 @@
       "full_name": "Yuan1z0825/nature-skills",
       "url": "https://github.com/Yuan1z0825/nature-skills",
       "description": "符合nature论文学术表达和科研绘图的Skill",
-      "stars": 52615,
+      "stars": 52730,
       "language": "Python",
       "updated_at": "2026-11-07",
       "created_at": "2026-04-24"
@@ -626,9 +637,9 @@
       "full_name": "boykopovar/AnyPS5",
       "url": "https://github.com/boykopovar/AnyPS5",
       "description": "Tool for automatic PS5 executables porting to Linux and Windows",
-      "stars": 51908,
+      "stars": 52171,
       "language": "C++",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-08-03"
     },
     {
@@ -636,9 +647,9 @@
       "full_name": "pingdotgg/t3code",
       "url": "https://github.com/pingdotgg/t3code",
       "description": "",
-      "stars": 50448,
+      "stars": 51794,
       "language": "TypeScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-02-08"
     },
     {
@@ -646,9 +657,9 @@
       "full_name": "JustVugg/colibri",
       "url": "https://github.com/JustVugg/colibri",
       "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
-      "stars": 48590,
+      "stars": 48878,
       "language": "C",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-07-01"
     },
     {
@@ -656,9 +667,9 @@
       "full_name": "block/buzz",
       "url": "https://github.com/block/buzz",
       "description": "A hive mind communication platform",
-      "stars": 36783,
+      "stars": 36801,
       "language": "Rust",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-03-06"
     },
     {
@@ -666,9 +677,9 @@
       "full_name": "webadderallorg/Recordly",
       "url": "https://github.com/webadderallorg/Recordly",
       "description": "Create polished demo videos without editing skills. Mac/Windows/Linux",
-      "stars": 36244,
+      "stars": 36302,
       "language": "TypeScript",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-03-12"
     },
     {
@@ -676,9 +687,9 @@
       "full_name": "NandhaKishorM/laya",
       "url": "https://github.com/NandhaKishorM/laya",
       "description": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
-      "stars": 35146,
+      "stars": 35206,
       "language": "Python",
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-08",
       "created_at": "2026-09-18"
     },
     {
@@ -686,7 +697,7 @@
       "full_name": "xai-org/x-algorithm",
       "url": "https://github.com/xai-org/x-algorithm",
       "description": "Algorithm powering the For You feed on X",
-      "stars": 34127,
+      "stars": 34145,
       "language": "Rust",
       "updated_at": "2026-11-07",
       "created_at": "2026-01-19"
@@ -696,7 +707,7 @@
       "full_name": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
       "description": "Free and open-source macOS menu bar toolkit.",
-      "stars": 33320,
+      "stars": 33546,
       "language": "Swift",
       "updated_at": "2026-11-05",
       "created_at": "2026-06-12"
@@ -706,9 +717,9 @@
       "full_name": "lbjlaq/Antigravity-Manager",
       "url": "https://github.com/lbjlaq/Antigravity-Manager",
       "description": "Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + React (Rust).专业的 Antigravity 账号管理与切换工具。为 Antigravity 提供一键无缝账号切换功能。",
-      "stars": 32875,
+      "stars": 32890,
       "language": "Rust",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2025-11-26"
     },
     {
@@ -716,9 +727,9 @@
       "full_name": "floci-io/floci",
       "url": "https://github.com/floci-io/floci",
       "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
-      "stars": 30951,
+      "stars": 31045,
       "language": "Java",
-      "updated_at": "2026-11-07",
+      "updated_at": "2026-11-08",
       "created_at": "2026-02-18"
     },
     {
@@ -726,7 +737,7 @@
       "full_name": "baidu/Unlimited-OCR",
       "url": "https://github.com/baidu/Unlimited-OCR",
       "description": "Unlimited OCR Works: Welcome the Era of One-shot Long-horizon Parsing.",
-      "stars": 30824,
+      "stars": 30873,
       "language": "Python",
       "updated_at": "2026-11-02",
       "created_at": "2026-06-18"
